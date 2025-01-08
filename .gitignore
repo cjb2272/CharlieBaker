@@ -1,0 +1,25 @@
+# Node modules
+frontend/node_modules/
+
+# Build outputs
+frontend/build/
+
+# Logs
+*.log
+
+# Dependency directories
+venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python cache
+*.pyc
+__pycache__/
+
+# Environment variables
+.env
+
+# launch.json config file
+launch.json
