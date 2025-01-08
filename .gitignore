@@ -4,13 +4,13 @@ frontend/node_modules/
 # Build outputs
 frontend/build/
 
-# Logs
+# Logs...? add Flask logs and any logs applicaple here
 *.log
 
-# Dependency directories
+# dependency related
 venv/
 
-# System files
+# System specific files
 .DS_Store
 Thumbs.db
 
@@ -18,8 +18,8 @@ Thumbs.db
 *.pyc
 __pycache__/
 
-# Environment variables
+# Environment variable files
 .env
 
-# launch.json config file
-launch.json
+# the launch.json config file
+.vscode/

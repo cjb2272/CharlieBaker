@@ -8,11 +8,12 @@
 # testing
 /coverage
 
-# production
+# production build
 /build
 
-# misc
+# system, env, and logs
 .DS_Store
+Thumbs.db
 .env.local
 .env.development.local
 .env.test.local
