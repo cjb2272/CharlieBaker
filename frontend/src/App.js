@@ -8,8 +8,10 @@
  * 
  * the components folder is a container for all additional components that will be used in the app.
  */
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import SideBarNavigation from './components/SideBarNavigation';
+import ScrollingPage from './components/ScrollingPage';
 
 /**
  * 
@@ -17,22 +19,9 @@ import './App.css';
  */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-	      <h1 className="text-3xl font-bold underline">Hello, Tailwind!</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <SideBarNavigation />
+      <ScrollingPage />
     </div>
   );
 }

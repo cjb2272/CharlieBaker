@@ -1,17 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+This is my Global CSS style sheet. 
+In comparision to using tailwind.config.js, this file is used to define global styles 
+that are or one-off global styles or browser resets  OR not covered by Tailwind CSS 
 
+*/
+
+/* Tailwind CSS v2.0.2 | 
+   these tailwind directives import the core styles components and utility classes into my project 
+*/
+@tailwind base; /*Imports Tailwind's base styles (e.g., resets and default browser styles).*/
+@tailwind components; /*Imports pre-designed component classes (e.g., buttons, forms) that you can use or extend.*/
+@tailwind utilities; /*Imports utility classes (e.g., text-center, bg-blue-500, etc.) for styling directly in your HTML/JSX.*/
+
+/*fall back fonts for everything body and under.
+  overwrite with tailwind utility classes etc..*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /*This improves font rendering on WebKit browsers (e.g., Chrome, Safari).*/
+  -moz-osx-font-smoothing: grayscale; /*This improves font rendering on macOS.*/
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+This enables smooth scrolling when navigating to anchors (e.g., clicking sidebar links like #section1). 
+It ensures a visually pleasing transition instead of an abrupt jump.
+*/
+html {
+  scroll-behavior: smooth;
 }
+
+
+
+/*
+I specified the lexend font family in tailwind.config.js
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.lexend-<uniquifier> {
+  font-family: "Lexend", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
