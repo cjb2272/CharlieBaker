@@ -10,8 +10,8 @@
  */
 import './App.css';
 import React from 'react';
-import SideBarNavigation from './components/SideBarNavigation';
-import ScrollingPage from './components/ScrollingPage';
+import SideBarNavigation from './components/SideBarNavigation.js';
+import ScrollingPage from './components/ScrollingPage.js';
 
 /**
  * 
@@ -19,10 +19,10 @@ import ScrollingPage from './components/ScrollingPage';
  */
 function App() {
   return (
-    <div className="">
+    <>
       <SideBarNavigation />
       <ScrollingPage />
-    </div>
+    </>
   );
 }
 

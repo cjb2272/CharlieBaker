@@ -1,7 +1,7 @@
 import React from 'react';
-import GeneralSection from './AboutSections/General';
-import EducationSection from './AboutSections/Education';
-import TravelSection from './AboutSections/Travel';
+import GeneralSection from './AboutSections/General.js';
+import EducationSection from './AboutSections/Education.js';
+import TravelSection from './AboutSections/Travel.js';
 
 const About = () => {
   return (
