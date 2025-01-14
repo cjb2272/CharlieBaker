@@ -18,6 +18,7 @@ import ScrollingPage from './components/ScrollingPage.js';
  * @returns 
  */
 function App() {
+  
   return (
     <>
       <SideBarNavigation />
