@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Typed from 'typed.js';
 //import particlesJS from 'particles.js';
 import AboutSection from './MainSections/About.js'; // can leave off the .js
@@ -8,13 +8,32 @@ import ParticlesBanner from './ParticlesBanner.js';
 
 // Export Default function component containing the main sections of the website
 const ScrollingPage = () => {
+  // const [activeSection, setActiveSection] = useState(null);
+  // const sectionRefs = useRef([]);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setActiveSection(entry.target.id);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.6 } // Trigger when 60% of the section is visible
+  //   );
+
+  //   sectionRefs.current.forEach((section) => observer.observe(section));
+
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     // h-screen- 100% of the viewport height.
-    <div className="ml-48 h-screen bg-background overflow-y-scroll text-light"> {/* TODO REMOVE COLOR */}
+    <div className="ml-48 h-screen bg-transparent overflow-y-scroll text-light"> {/* TODO REMOVE COLOR */}
       <ParticlesBanner>
-        <div className='py-48 text-center'>
-          <h1 className='text-6xl font-bold'> Hi! I'm Charlie</h1>
+        <div className='py-48 text-center text-light'>
+          <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
           <TypewriterEffect/>
         </div>
       </ParticlesBanner>
@@ -34,10 +53,11 @@ const ScrollingPage = () => {
 };
 
 const TypewriterEffect = () => {
-  const element = useRef(null); // Reference to the DOM element where Typed.js will mount
+  const domElementRef = useRef(null); // Reference to the DOM element where Typed.js will mount
 
+  // empty dependencies array, only runs once on mount when component appears on screen for first time
   useEffect(() => {
-    const typed = new Typed(element.current, {
+    const typed = new Typed(domElementRef.current, {
       strings: [
         "Welcome to my website!",  
         "I'm a Software Engineer.",
@@ -52,16 +72,14 @@ const TypewriterEffect = () => {
       loop: true, // Loop the typing animation
     });
 
-    return () => {
-      typed.destroy(); // Cleanup on component unmount
+    return () => { //cleanup function
+      typed.destroy();
     };
   }, []);
 
   return (
     <div>
-      <h1>
-        <span ref={element}></span>
-      </h1>
+      <span ref={domElementRef}></span>
     </div>
   );
 };

@@ -35,8 +35,9 @@ module.exports = {
       background: '#000000',
       light: '#BFFCF9',
       vibrant: '#00C9C8',
-      secondary: '#47817F',
-      tertiary: '#426B69'
+      secondary: '#426B69', //#47817F
+      tertiary: '#426B69',
+      transparent: 'transparent'
     }
     //fontFamily: {
     //  sans: ['Graphik', 'sans-serif'], //className="font-sans"

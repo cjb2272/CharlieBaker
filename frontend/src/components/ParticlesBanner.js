@@ -1,128 +1,81 @@
-//import React, { useCallback } from "react";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-//import { loadSlim } from "tsparticles";
+import { MoveDirection, OutMode } from "@tsparticles/engine";
+
 
 const ParticlesBackground = ({ children }) => {
-  const [init, setInit] = useState(false);
+  const [isInit, setIsInit] = useState(false);
 
-  //const particlesInit = useCallback(async (engine) => {
-  //  await loadFull(engine); // Load all features of tsParticles TODO CHANGE THIS AS FULL ISN'T NEEDED
-  //}, []);
-
-  // this should be run only once per application lifetime
   useEffect(() => {
+    console.log("ParticlesBackground Effect running post render..."); // ENSURE this runs only once per application lifetime
+  
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      await loadFull(engine);
-      //await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
+      
+      await loadFull(engine); // loads the tsparticles package bundle, change bundle size accordingly
+      //in order: loadAll(), loadFull(), loadSlim(), loadBasic(), ....
+      
+    }).then(() => {  //.then() is a promise that runs after the async function is complete
+      setIsInit(true);
     });
-  }, []);
+    // no cleanup specified, if we are init an engine shouldnt we kill it
+  }, []); // runs once on inital component Mount | isInit is reactive though, shouldn't Linter flag this?
 
+  // function that takes one param 'container' and logs it to the console
   const particlesLoaded = (container) => {
-    console.log(container);
+    console.log("particles loaded: ", container);
   };
 
-  const particlesOptions = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: "#ff66ff",
-        },
-      },
-      fullScreen: { enable: true, zIndex: -1 }, // Ensures particles are in the background WE ARENT SEEING SHIT, WHEN WE REMOVE WE COVER WHOLE SITE
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: false,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
-    [],
-  );
-
-  if (init) {
+  if (isInit) {
+    console.log("ParticlesBackground is being rendered (B) ...");
     return (
       <>
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
-          options={particlesOptions}
+          options={starsOptions}  //starsOptions particlesOptions
         />
         <div className="particle-banner-content">{children}</div>
       </>
     );
   }
 
+  console.log("ParticlesBackground is being rendered (A) ...");
   return <></>;
+};
 
-  //return (
-  //  <>
-  //    <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
-  //    <div className="particle-banner-content">{children}</div>
-  //  </>
-  //);
+const starsOptions = {
+  background: {
+    color: "#000",
+  },
+  fullScreen: { enable: true, zIndex: -1 },
+  particles: {
+    number: {
+        value: 100,
+    },
+    move: {
+        direction: MoveDirection.none,
+        enable: true,
+        outModes: {
+            default: OutMode.out,
+        },
+        random: true,
+        speed: 0.1,
+        straight: false,
+    },
+    opacity: {
+        animation: {
+            enable: true,
+            speed: 1,
+            sync: false,
+        },
+        value: { min: 0, max: 1 },
+    },
+    size: {
+        value: { min: 1, max: 3 },
+    },
+  },
 };
 
 export default ParticlesBackground;
