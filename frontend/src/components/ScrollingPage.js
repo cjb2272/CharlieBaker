@@ -17,7 +17,6 @@ const ScrollingPage = ({ setActiveSection }) => {
 
   // intersection observer detects which section is currently visible in viewport and updates 
   // the activeSection state in parent component App.js via the callback function setActiveSection
-  /*
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => { //this is the callback function the browser auto calls when one of the observed elements crosses the threshold
@@ -49,7 +48,7 @@ const ScrollingPage = ({ setActiveSection }) => {
     return () => observer.disconnect(); // Cleanup observer on unmount
   }, [setActiveSection]); // Dependency ensures callback is updated if setActiveSection changes
 
-  */
+  
 
   return (
     // h-screen- 100% of the viewport height.

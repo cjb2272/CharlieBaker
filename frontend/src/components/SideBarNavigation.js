@@ -5,12 +5,12 @@ const SideBarNavigation = ({ activeSection }) => {
     <div className="h-screen w-48 fixed bg-background border-r-2 border-tertiary">
       <nav className="h-full text-light font-medium">
         <ul className="h-full flex flex-col justify-center items-center space-y-16">
-          <li><a href="#sectionContact" className="text-vibrant">Contact</a></li>
-          <li><a href="#sectionAbout" className="text-vibrant">About</a></li>
-          <li><a href="#sectionProjects" className="text-vibrant">Projects</a></li>
-          {/* <li><a href="#sectionContact" className={activeSection === "sectionContact" ? "text-vibrant" : ""}>Contact</a></li>
+          {/* <li><a href="#sectionContact" className="hover:text-vibrant">Contact</a></li>
+          <li><a href="#sectionAbout" className="hover:text-vibrant">About</a></li>
+          <li><a href="#sectionProjects" className="hover:text-vibrant">Projects</a></li> */}
+          <li><a href="#sectionContact" className={activeSection === "sectionContact" ? "text-vibrant" : ""}>Contact</a></li>
           <li><a href="#sectionAbout" className={activeSection === "sectionAbout" ? "text-vibrant" : ""}>About</a></li>
-          <li><a href="#sectionProjects" className={activeSection === "sectionProjects" ? "text-vibrant" : ""}>Projects</a></li> */}
+          <li><a href="#sectionProjects" className={activeSection === "sectionProjects" ? "text-vibrant" : ""}>Projects</a></li>
           
           {/* <li><a href="#subSectionSpotifyProj" className={activeSection === "subSectionSpotifyProj" ? "text-vibrant" : ""}>Playlist Automation GPT</a></li>
           <li><a href="#subSectionRBSProj" className={activeSection === "subSectionRBSProj" ? "text-vibrant" : ""}></a>Reporting Tool</li> */}
