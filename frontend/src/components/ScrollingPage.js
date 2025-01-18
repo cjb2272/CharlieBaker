@@ -1,45 +1,90 @@
-import React, { useEffect, useRef } from 'react';
+/**
+ * Intersection Observer API used to handle the scrolling effects on navigation bar
+ * https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+ */
+
+import React, { useEffect, useState, useRef } from 'react';
 import Typed from 'typed.js';
 import AboutSection from './MainSections/About.js'; // can leave off the .js
 import ContactSection from './MainSections/Contact.js';
 import ProjectsSection from './MainSections/Projects.js';
 
 // Export Default function component containing the main sections of the website
-const ScrollingPage = () => {
-  return (
+const ScrollingPage = ({ setActiveSection }) => {
+  
+  // the array of DOM elements we want to observe
+  const sectionRefs = useRef([]);
 
-    // ml-64 is a utility class that sets the left margin of the element to 16rem.
-    // h-screen is a utility class that sets the height of the element to 100% of the viewport height.
-    // overflow-y-scroll is a utility class that adds a vertical scrollbar to the element when the content is too tall to fit in the viewport.
-    <div className="ml-48 h-screen bg-lime-50 overflow-y-scroll text-lime-950"> {/* TODO REMOVE COLOR */}
-      <div className='py-48 text-center'>
-        <h1 className='text-6xl font-bold'> Hi! I'm Charlie</h1>
+  // intersection observer detects which section is currently visible in viewport and updates 
+  // the activeSection state in parent component App.js via the callback function setActiveSection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => { //this is the callback function the browser auto calls when one of the observed elements crosses the threshold
+        let mostVisibleSection = null;
+        let maxIntersectionRatio = 0;
+        
+        entries.forEach((entry) => {
+          console.log(`Observing ${entry.target.id}: Ratio=${entry.intersectionRatio}, Intersecting=${entry.isIntersecting}`);
+          if (entry.isIntersecting && entry.intersectionRatio > maxIntersectionRatio) {
+            //entry.target is the observed DOM element
+            mostVisibleSection = entry.target.id;
+            maxIntersectionRatio = entry.intersectionRatio;
+          }
+        });
+
+        if (mostVisibleSection) {
+          // Update the active section only if there's a clear most visible section
+          setActiveSection(mostVisibleSection);
+        }
+      },
+      { threshold: [0.5, 0.8] } // Trigger when 50% AND 80% of the section is visible
+    );
+
+    // Tells Observer to start observing each element in the sectionRefs.current array
+    // when an observed element intersects with viewport the observer auto creates and passes
+    // an array of IntersectionObserverEntry objects (the entries variable) to its callback function.
+    sectionRefs.current.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect(); // Cleanup observer on unmount
+  }, [setActiveSection]); // Dependency ensures callback is updated if setActiveSection changes
+
+  
+
+  return (
+    // h-screen- 100% of the viewport height.
+    <div className="ml-48 h-screen bg-transparent overflow-y-scroll text-light"> {/* TODO REMOVE COLOR */}
+      <div className='py-48 text-center text-light'>
+        <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
         <TypewriterEffect/>
       </div>
-      <div className='max-w-5xl mx-auto my-12 py-4 bg-lime-200 border-2 border-lime-600 rounded-3xl'>
-        <ContactSection/>
+      <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+        <ContactSection sectionRefs={sectionRefs}/>
       </div>
-      <hr className='mx-auto border-none bg-lime-200 hr-custom'/>
-      <div className='max-w-5xl mx-auto my-12 py-4 bg-lime-200 border-2 border-lime-600 rounded-3xl'>
-        <AboutSection/>
+      <hr className='mx-auto border-none bg-tertiary hr-custom'/>
+      <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+        <AboutSection sectionRefs={sectionRefs}/>
       </div>
-      <hr className='mx-auto border-none bg-lime-200 hr-custom'/>
-      <div className='max-w-5xl mx-auto my-12 py-4 bg-lime-200 border-2 border-lime-600 rounded-3xl'>
-        <ProjectsSection/>
+      <hr className='mx-auto border-none bg-tertiary hr-custom'/>
+      <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+        <ProjectsSection sectionRefs={sectionRefs}/>
       </div>
     </div>
   );
 };
 
 const TypewriterEffect = () => {
-  const element = useRef(null); // Reference to the DOM element where Typed.js will mount
+  const domElementRef = useRef(null); // Reference to the DOM element where Typed.js will mount
 
+  // empty dependencies array, only runs once on mount when component appears on screen for first time
   useEffect(() => {
-    const typed = new Typed(element.current, {
+    const typed = new Typed(domElementRef.current, {
       strings: [
         "Welcome to my website!",  
         "I'm a Software Engineer.",
+        "I'm a Leadership Enthusiast.",
+        "I'm a Descriptive Pull Requester ;)",
         "I'm a Full Stack Developer.",
+        "I'm an AGILE Lover <3.",
         "I'm a Creator.",
       ],
       typeSpeed: 50, // Typing speed in milliseconds
@@ -47,16 +92,14 @@ const TypewriterEffect = () => {
       loop: true, // Loop the typing animation
     });
 
-    return () => {
-      typed.destroy(); // Cleanup on component unmount
+    return () => { //cleanup function
+      typed.destroy();
     };
   }, []);
 
   return (
     <div>
-      <h1>
-        <span ref={element}></span>
-      </h1>
+      <span ref={domElementRef}></span>
     </div>
   );
 };

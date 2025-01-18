@@ -30,8 +30,15 @@ module.exports = {
       fontFamily: {
         lexend: ['Lexend', 'sans-serif'] // className="font-lexend"
       }
+    },
+    colors: {
+      background: '#000000',
+      light: '#BFFCF9',
+      vibrant: '#00C9C8',
+      secondary: '#426B69', //#47817F
+      tertiary: '#426B69',
+      transparent: 'transparent'
     }
-
     //fontFamily: {
     //  sans: ['Graphik', 'sans-serif'], //className="font-sans"
     //}
