@@ -1,52 +1,73 @@
+/**
+ * Intersection Observer API used to handle the scrolling effects on navigation bar
+ * https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+ */
+
 import React, { useEffect, useState, useRef } from 'react';
 import Typed from 'typed.js';
-//import particlesJS from 'particles.js';
 import AboutSection from './MainSections/About.js'; // can leave off the .js
 import ContactSection from './MainSections/Contact.js';
 import ProjectsSection from './MainSections/Projects.js';
-import ParticlesBanner from './ParticlesBanner.js';
 
 // Export Default function component containing the main sections of the website
-const ScrollingPage = () => {
-  // const [activeSection, setActiveSection] = useState(null);
-  // const sectionRefs = useRef([]);
+const ScrollingPage = ({ setActiveSection }) => {
+  
+  // the array of DOM elements we want to observe
+  const sectionRefs = useRef([]);
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           setActiveSection(entry.target.id);
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.6 } // Trigger when 60% of the section is visible
-  //   );
+  // intersection observer detects which section is currently visible in viewport and updates 
+  // the activeSection state in parent component App.js via the callback function setActiveSection
+  /*
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => { //this is the callback function the browser auto calls when one of the observed elements crosses the threshold
+        let mostVisibleSection = null;
+        let maxIntersectionRatio = 0;
+        
+        entries.forEach((entry) => {
+          console.log(`Observing ${entry.target.id}: Ratio=${entry.intersectionRatio}, Intersecting=${entry.isIntersecting}`);
+          if (entry.isIntersecting && entry.intersectionRatio > maxIntersectionRatio) {
+            //entry.target is the observed DOM element
+            mostVisibleSection = entry.target.id;
+            maxIntersectionRatio = entry.intersectionRatio;
+          }
+        });
 
-  //   sectionRefs.current.forEach((section) => observer.observe(section));
+        if (mostVisibleSection) {
+          // Update the active section only if there's a clear most visible section
+          setActiveSection(mostVisibleSection);
+        }
+      },
+      { threshold: [0.5, 0.8] } // Trigger when 50% AND 80% of the section is visible
+    );
 
-  //   return () => observer.disconnect();
-  // }, []);
+    // Tells Observer to start observing each element in the sectionRefs.current array
+    // when an observed element intersects with viewport the observer auto creates and passes
+    // an array of IntersectionObserverEntry objects (the entries variable) to its callback function.
+    sectionRefs.current.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect(); // Cleanup observer on unmount
+  }, [setActiveSection]); // Dependency ensures callback is updated if setActiveSection changes
+
+  */
 
   return (
     // h-screen- 100% of the viewport height.
     <div className="ml-48 h-screen bg-transparent overflow-y-scroll text-light"> {/* TODO REMOVE COLOR */}
-      <ParticlesBanner>
-        <div className='py-48 text-center text-light'>
-          <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
-          <TypewriterEffect/>
-        </div>
-      </ParticlesBanner>
+      <div className='py-48 text-center text-light'>
+        <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
+        <TypewriterEffect/>
+      </div>
       <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-        <ContactSection/>
+        <ContactSection sectionRefs={sectionRefs}/>
       </div>
       <hr className='mx-auto border-none bg-tertiary hr-custom'/>
       <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-        <AboutSection/>
+        <AboutSection sectionRefs={sectionRefs}/>
       </div>
       <hr className='mx-auto border-none bg-tertiary hr-custom'/>
       <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-        <ProjectsSection/>
+        <ProjectsSection sectionRefs={sectionRefs}/>
       </div>
     </div>
   );

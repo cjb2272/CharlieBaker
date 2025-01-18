@@ -1,5 +1,6 @@
-const RBSProj = () => {
+const RBSProj = ({sectionRefs}) => {
     return (
+      // <section id="subSectionRBSProj" ref={(el) => (sectionRefs.current[4] = el)} className="">
       <section id="subSectionRBSProj" className="">
         <h1 className="text-2xl font-bold text-center">Reporting Tool</h1>
         <p className="p-tag-default">Littering and butter stuff more cerebral high couch lock Abba Zabba you my only friend.

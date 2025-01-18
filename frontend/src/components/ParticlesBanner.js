@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+//import { loadFull } from "tsparticles";
+import { loadBasic  } from "@tsparticles/basic"; // "@tsparticles/basic" package install
 import { MoveDirection, OutMode } from "@tsparticles/engine";
 
 
-const ParticlesBackground = ({ children }) => {
+const ParticlesBackground = () => {
   const [isInit, setIsInit] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const ParticlesBackground = ({ children }) => {
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       
-      await loadFull(engine); // loads the tsparticles package bundle, change bundle size accordingly
+      await loadBasic(engine); // loads the tsparticles package bundle, change bundle size accordingly, install&import
       //in order: loadAll(), loadFull(), loadSlim(), loadBasic(), ....
       
     }).then(() => {  //.then() is a promise that runs after the async function is complete
@@ -36,7 +37,7 @@ const ParticlesBackground = ({ children }) => {
           particlesLoaded={particlesLoaded}
           options={starsOptions}  //starsOptions particlesOptions
         />
-        <div className="particle-banner-content">{children}</div>
+        {/* <div className="particle-banner-content">{children}</div> */}
       </>
     );
   }

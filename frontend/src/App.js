@@ -9,7 +9,7 @@
  * the components folder is a container for all additional components that will be used in the app.
  */
 import './App.css';
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import SideBarNavigation from './components/SideBarNavigation.js';
 import ScrollingPage from './components/ScrollingPage.js';
 
@@ -18,11 +18,20 @@ import ScrollingPage from './components/ScrollingPage.js';
  * @returns 
  */
 function App() {
+  const [activeSection, setActiveSection] = useState(null);
+
+  // Memoize setActiveSection to avoid unnecessary re-renders
+  const handleSetActiveSection = useCallback((sectionId) => {
+    setActiveSection(sectionId);
+  }, []);
+  // Without useCallback, a new instance of the setActiveSection function 
+  // would be created on every re-render of App.
+  // which would inturn re-render the SideBarNavigation component and the ScrollingPage component.
   
   return (
     <>
-      <SideBarNavigation />
-      <ScrollingPage />
+      <SideBarNavigation activeSection={activeSection} />
+      <ScrollingPage setActiveSection={handleSetActiveSection}/>
     </>
   );
 }
