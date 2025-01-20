@@ -5,9 +5,7 @@ const SideBarNavigation = ({ activeSection }) => {
     <div className="h-screen w-48 fixed bg-background border-r-2 border-tertiary">
       <nav className="h-full text-light font-medium">
         <ul className="h-full flex flex-col justify-center items-center space-y-16">
-          {/* <li><a href="#sectionContact" className="hover:text-vibrant">Contact</a></li>
-          <li><a href="#sectionAbout" className="hover:text-vibrant">About</a></li>
-          <li><a href="#sectionProjects" className="hover:text-vibrant">Projects</a></li> */}
+          {/*  className="hover:text-vibrant" */}
           <li><a href="#sectionContact" className={activeSection === "sectionContact" ? "text-vibrant" : ""}>Contact</a></li>
           <li><a href="#sectionAbout" className={activeSection === "sectionAbout" ? "text-vibrant" : ""}>About</a></li>
           <li><a href="#sectionProjects" className={activeSection === "sectionProjects" ? "text-vibrant" : ""}>Projects</a></li>
