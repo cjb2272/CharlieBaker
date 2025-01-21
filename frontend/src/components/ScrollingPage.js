@@ -61,13 +61,21 @@ const ScrollingPage = ({ setActiveSection }) => {
         <ContactSection sectionRefs={sectionRefs}/>
       </div>
       <hr className='mx-auto border-none bg-tertiary hr-custom'/>
-      <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-        <AboutSection sectionRefs={sectionRefs}/>
-      </div>
+      <section id="sectionAbout" ref={(el) => (sectionRefs.current[1] = el)}>
+        <div className="h-12"></div> {/* Empty content block cleans up nav linking and provides space*/}
+        <h1 className="mx-auto max-w-xs mb-4 py-2 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">About Me</h1>
+        <div className='mx-auto max-w-5xl mb-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+          <AboutSection sectionRefs={sectionRefs}/>
+        </div>
+      </section>
       <hr className='mx-auto border-none bg-tertiary hr-custom'/>
-      <div className='max-w-5xl mx-auto my-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-        <ProjectsSection sectionRefs={sectionRefs}/>
-      </div>
+      <section id="sectionProjects" ref={(el) => (sectionRefs.current[2] = el)}>
+        <div className="h-12"></div>
+        <h1 className="mx-auto max-w-xs mb-4 py-2 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">My Projects</h1>
+        <div className='mx-auto max-w-5xl mb-12 py-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+          <ProjectsSection sectionRefs={sectionRefs}/>
+        </div>
+      </section>
     </div>
   );
 };

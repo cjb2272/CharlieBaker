@@ -2,7 +2,7 @@ const RBSProj = ({sectionRefs}) => {
     return (
       // <section id="subSectionRBSProj" ref={(el) => (sectionRefs.current[4] = el)} className="">
       <section id="subSectionRBSProj" className="">
-        <h1 className="text-2xl font-bold text-center">Reporting Tool</h1>
+        <h1 className="text-2xl font-bold pb-2">Reporting Tool</h1>
         <p className="p-tag-default">Littering and butter stuff more cerebral high couch lock Abba Zabba you my only friend.
            The cannabis industry will gravity bong a cotton mouth pizza dipped in ranch. French inhale topical CBD lotion 
            and binge watch Cheech and Chong. Oh my gawd, they like totally know I&apos;m high. California kush roll it up into

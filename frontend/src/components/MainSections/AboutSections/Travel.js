@@ -1,7 +1,7 @@
 const Travel = () => {
     return (
       <section id="subSectionTravel" className="">
-        <h1 className="text-1xl font-bold">Travel</h1>
+        <h1 className="text-2xl font-bold pb-2">Travel</h1>
         <p className="p-tag-default">French inhale topical CBD lotion and binge watch Cheech and Chong. Extremely dope
            chronic eye drops in the basement with psychedellic nugs. Broccoli bong butterfly gateway drugs to elevate 
            your good vibrations. Crystalized buds from trimming tasty weed pens THC sativa euphoric resinated dome piece.

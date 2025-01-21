@@ -1,7 +1,7 @@
 const Education = () => {
     return (
       <section id="subSectionEducation" className="">
-        <h1 className="text-1xl font-bold">Education</h1>
+        <h1 className="text-2xl font-bold pb-2">Education</h1>
         <p className="p-tag-default">Pass the duchie Bob Marley this shatter is hella potent. The cannabis industry will 
           gravity bong a cotton mouth pizza dipped in ranch. Make a quick pipe out of an apple and release the carb Purple
            Haze all around. Rolling down the street smoking endo, laid back. Broccoli bong butterfly gateway drugs to elevate

@@ -1,7 +1,7 @@
 const General = () => {
     return (
       <section id="subSectionGeneral" className="">
-        <h1 className="text-1xl font-bold">General</h1>
+        <h1 className="text-2xl font-bold pb-2">General</h1>
         <p className="p-tag-default">California kush roll it up into a fat blunt for medicinal purposes to elevate your
            consciousness. Rasta! Crystalized buds from trimming tasty weed pens THC sativa euphoric resinated dome piece.
             Rolling down the street smoking endo, laid back. Indica is like ‘in da couch’ like straight couch lock chasing

@@ -16,8 +16,8 @@ that are or one-off global styles or browser resets  OR not covered by Tailwind 
   overwrite with tailwind utility classes etc..*/
 body {
   margin: 0;
-  font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased; /*This improves font rendering on WebKit browsers (e.g., Chrome, Safari).*/
   -moz-osx-font-smoothing: grayscale; /*This improves font rendering on macOS.*/
@@ -31,16 +31,20 @@ html {
   scroll-behavior: auto; /*smooth*/
 }
 
-
 /*Using tailwinds apply directive to clean up className'ing a bit*/
 .p-tag-default {
   @apply max-w-2xl;
 }
 
-
 .hr-custom {
   width: 95%;
   height: 2px;
+}
+
+.selected-nav-section-custom {
+  @apply text-vibrant;
+  @apply bg-vibrant;
+  @apply bg-opacity-50;
 }
 
 /*
@@ -57,4 +61,3 @@ I specified the lexend font family in tailwind.config.js
 }
 
 */
-
