@@ -6,14 +6,14 @@ const SideBarNavigation = ({ activeSection }) => {
       <nav className="h-full text-light font-medium">
         <ul className="h-full flex flex-col justify-center space-y-16">
           {/* className="hover:text-vibrant" */}
-          <li className="px-2">
-            <a href="#sectionContact" className={activeSection === "sectionContact" ? "selected-nav-section-custom" : ""}>Contact</a>
+          <li className={activeSection === "sectionContact" ? "selected-nav-section-custom" : "px-2 text-center"}>
+            <a href="#sectionContact" className="block py-2">Contact</a>
           </li>
-          <li className="px-2">
-            <a href="#sectionAbout" className={activeSection === "sectionAbout" ? "selected-nav-section-custom" : ""}>About</a>
+          <li className={activeSection === "sectionAbout" ? "selected-nav-section-custom" : "px-2 text-center"}>
+            <a href="#sectionAbout" className="block py-2">About</a>
           </li>
-          <li className="px-2">
-            <a href="#sectionProjects" className={activeSection === "sectionProjects" ? "selected-nav-section-custom" : ""}>Projects</a>
+          <li className={activeSection === "sectionProjects" ? "selected-nav-section-custom" : "px-2 text-center"}>
+            <a href="#sectionProjects" className="block py-2">Projects</a>
           </li>
           
           {/* <li><a href="#subSectionSpotifyProj" className={activeSection === "subSectionSpotifyProj" ? "text-vibrant" : ""}>Playlist Automation GPT</a></li>

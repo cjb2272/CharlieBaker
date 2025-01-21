@@ -44,7 +44,11 @@ html {
 .selected-nav-section-custom {
   @apply text-vibrant;
   @apply bg-vibrant;
-  @apply bg-opacity-50;
+  @apply bg-opacity-20;
+  @apply pl-2;
+  @apply mr-2;
+  @apply text-center;
+  @apply rounded-r-md;
 }
 
 /*
