@@ -29,6 +29,9 @@ module.exports = {
       },
       fontFamily: {
         lexend: ['Lexend', 'sans-serif'] // className="font-lexend"
+      },
+      margin: {
+        xxl: '208px' //192 + 16
       }
     },
     colors: {
@@ -46,7 +49,8 @@ module.exports = {
     //extend: {}
   },
   plugins: [
-    require('tailwind-scrollbar'), //scrollbar styling
+    require('tailwind-scrollbar') //scrollbar styling  . ({ nocompatible: true })
+    // ({ preferredStrategy: 'pseudoelements' }),
   ]
 }
 
