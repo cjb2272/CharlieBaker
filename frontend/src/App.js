@@ -10,6 +10,7 @@
  */
 import './App.css';
 import React, { useState, useCallback } from 'react';
+import HamburgerNavigation from './components/HamburgerNavigation.js';
 import SideBarNavigation from './components/SideBarNavigation.js';
 import ScrollingPage from './components/ScrollingPage.js';
 
@@ -30,7 +31,12 @@ function App() {
   
   return (
     <>
-      <SideBarNavigation activeSection={activeSection} />
+      <div className={"hidden lg:block"}> {/**/}
+        <SideBarNavigation activeSection={activeSection} />
+      </div>
+      <div className={"lg:hidden absolute top-4 left-4 z-50"}>
+        <HamburgerNavigation/>
+      </div>
       <ScrollingPage setActiveSection={handleSetActiveSection}/>
     </>
   );

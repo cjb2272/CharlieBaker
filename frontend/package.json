@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
     "@react-spring/web": "^9.7.5",
     "@tsparticles/basic": "^3.7.1",
     "@tsparticles/react": "^3.0.0",

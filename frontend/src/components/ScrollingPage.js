@@ -51,8 +51,8 @@ const ScrollingPage = ({ setActiveSection }) => {
   
 
   return (
-    // h-screen- 100% of the viewport height.      {/*vv TODO REMOVE COLOR vv*/}   margin left 48+16=64px (xxl theme in config)
-    <div className="ml-xxl h-screen bg-transparent text-light overflow-y-scroll scrollbar scrollbar-thumb-tertiary scrollbar-track-transparent">
+    // h-screen- 100% of the viewport height.      {/*vv TODO REMOVE COLOR vv*/}   margin left 192+16=208px (xxl theme in config)
+    <div className="ml-4 lg:ml-xxl h-screen bg-transparent text-light overflow-y-scroll scrollbar scrollbar-thumb-tertiary scrollbar-track-transparent">
       <div className='py-48 text-center text-light'>
         <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
         <TypewriterEffect/>
