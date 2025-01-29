@@ -7,7 +7,8 @@ const AnimatedMenuButton = animated(MenuButton);
 const AnimatedMenuItems = animated(MenuItems);
 const AnimatedContainer = animated.div;
 
-const HamburgerNavigation = () => {
+// deviceInputType prop equals 'Touch Input' OR 'Mouse Input'
+const HamburgerNavigation = ({ deviceInputType }) => {
 
   const [buttonStyles, buttonApi] = useSpring(() => ({
     from: {boxShadow: '0px 3px 2px 2px rgba(0,0,0,0.3)'},
@@ -30,7 +31,7 @@ const HamburgerNavigation = () => {
   }));
 
   return (
-    <Menu>
+    <Menu> {/*HeadlessUI Menu Component automatically tracks whether menu is open or closed */}
       {({ open }) => { //open is HeadlessUI internal state
 
         buttonApi.start({
