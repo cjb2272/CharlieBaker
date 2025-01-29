@@ -34,7 +34,7 @@ function App() {
       <div className={"hidden lg:block"}> {/**/}
         <SideBarNavigation activeSection={activeSection} />
       </div>
-      <div className={"lg:hidden absolute top-4 left-4 z-50"}>
+      <div className={"lg:hidden absolute top-4 left-4 z-10"}>
         <HamburgerNavigation/>
       </div>
       <ScrollingPage setActiveSection={handleSetActiveSection}/>
