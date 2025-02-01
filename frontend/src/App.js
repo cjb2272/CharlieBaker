@@ -13,17 +13,6 @@ import React, { useState, useCallback } from 'react';
 import HamburgerNavigation from './components/HamburgerNavigation.js';
 import SideBarNavigation from './components/SideBarNavigation.js';
 import ScrollingPage from './components/ScrollingPage.js';
-import { deviceType } from 'detect-it';
-
-const detectDevice = () => {
-  if (deviceType === 'touchOnly') {
-    console.log("User is on a Touch Input Device");
-    return 'Touch Input'; // Devices with only touch input
-  } else if (deviceType === 'mouseOnly' || deviceType === 'hybrid') {
-    console.log("User is on a Mouse Input Device");
-    return 'Mouse Input'; // Devices with mouse or hybrid input
-  }
-};
 
 /**
  * 
@@ -39,9 +28,6 @@ function App() {
   // Without useCallback, a new instance of the setActiveSection function 
   // would be created on every re-render of App.
   // which would inturn re-render the SideBarNavigation component and the ScrollingPage component.
-
-  // Determine device type at render time and useMemo so we only calculate once during component lifecycle
-  const deviceInputType = useMemo(() => detectDevice(), []);
   
   return (
     <>
@@ -49,7 +35,7 @@ function App() {
         <SideBarNavigation activeSection={activeSection} />
       </div>
       <div className={"lg:hidden absolute top-4 left-4 z-10"}>
-        <HamburgerNavigation deviceInputType={deviceInputType}/>
+        <HamburgerNavigation/>
       </div>
       <ScrollingPage setActiveSection={handleSetActiveSection}/>
     </>
