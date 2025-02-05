@@ -32,6 +32,14 @@ const HamburgerNavigation = ( {closeMenu} ) => {
     config: { tension: 200, friction: 20 }
   }));
 
+  const handleSmoothScroll = (e, targetID) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetID);
+    if (targetElement) {
+      targetElement.scrollIntoView({behavior: "smooth"});
+    }
+  };
+
   // Programatically Close the Hamburger Menu based external menuClose prop
   useEffect(() => {
     if (menuButtonRef.current) { //if DOM element has initalized 
@@ -90,6 +98,7 @@ const HamburgerNavigation = ( {closeMenu} ) => {
                     <a
                       href="#sectionContact"
                       className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                      onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}
                     >
                       Contact
                     </a>
@@ -98,6 +107,7 @@ const HamburgerNavigation = ( {closeMenu} ) => {
                     <a
                       href="#sectionAbout"
                       className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                      onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}
                     >
                     About
                     </a>
@@ -106,6 +116,7 @@ const HamburgerNavigation = ( {closeMenu} ) => {
                     <a
                       href="#sectionProjects"
                       className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                      onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}
                       >
                       Projects
                     </a>

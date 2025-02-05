@@ -28,8 +28,14 @@ This enables smooth scrolling when navigating to anchors (e.g., clicking sidebar
 It ensures a visually pleasing transition instead of an abrupt jump.
 */
 html {
-  scroll-behavior: auto; /*smooth*/
+  scroll-behavior: smooth; /*smooth*/
 }
+
+/* @media (prefers-reduced-motion: reduce) {
+  html {
+      scroll-behavior: auto;
+  }
+} */
 
 /*Using tailwinds apply directive to clean up className'ing a bit*/
 .p-tag-default {
