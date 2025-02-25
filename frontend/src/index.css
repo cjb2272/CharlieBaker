@@ -39,7 +39,7 @@ html {
 
 /*Using tailwinds apply directive to clean up className'ing a bit*/
 .p-tag-default {
-  @apply max-w-2xl;
+  @apply lg:max-w-2xl;
 }
 
 .hr-custom {
@@ -56,6 +56,27 @@ html {
   @apply text-center;
   @apply rounded-r-md;
 }
+
+/*px over REM can cause issues when changing root font size*/
+.reporting-tool-iframe {
+  @apply 4xs:max-h-[214px];
+  @apply 3xs:max-h-[217px];
+  @apply 2xs:max-h-[282px];
+  @apply xs:max-h-[318px];
+  @apply sm:max-h-[354px];
+  @apply md:max-h-[410px];
+  @apply lg:max-h-[410px];
+  @apply p-1 bg-white;
+  @apply border-2 border-white rounded-2xl;
+  @apply 4xs:max-w-[298px];
+  @apply 3xs:max-w-[332px];
+  @apply 2xs:max-w-[448px]; /*max-w-md*/
+  @apply xs:max-w-[512px]; /*max-w-lg*/
+  @apply sm:max-w-[576px]; /*max-w-xl*/
+  @apply md:max-w-[676px]; /*max-w-2xl*/
+  @apply lg:max-w-[676px]; /*max-w-2xl*/
+}
+/*VERY IMPORTANT NOTE!!!!! THE ORDER IN WHICH YOU DO THE APPLY RESPONSIVE BREAKPOINTS MATTERS. sm, md, lg versus large being the first*/
 
 /*
 I specified the lexend font family in tailwind.config.js

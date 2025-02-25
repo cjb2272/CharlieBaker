@@ -4,6 +4,9 @@ frontend/node_modules/
 # Build outputs
 frontend/build/
 
+# images...
+frontend/src/assets/
+
 # Logs...? add Flask logs and any logs applicaple here
 *.log
 

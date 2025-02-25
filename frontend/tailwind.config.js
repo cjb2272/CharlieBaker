@@ -17,6 +17,10 @@ module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     screens: { // customize the responsive breakpoints in your project.
+      '4xs': '100px',
+      '3xs': '376px',
+      '2xs': '532px',
+      'xs': '592px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -26,6 +30,7 @@ module.exports = {
     extend: {
       colors: {
         lime: colors.lime, // Extend default colors with Lime palette
+        white: colors.white,
       },
       fontFamily: {
         lexend: ['Lexend', 'sans-serif'] // className="font-lexend"
@@ -40,7 +45,8 @@ module.exports = {
       vibrant: '#00C9C8',
       secondary: '#426B69', //#47817F
       tertiary: '#426B69',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      //powerpointgray: '#444444'
     }
     //fontFamily: {
     //  sans: ['Graphik', 'sans-serif'], //className="font-sans"
