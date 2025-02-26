@@ -31,6 +31,7 @@ module.exports = {
       colors: {
         lime: colors.lime, // Extend default colors with Lime palette
         white: colors.white,
+        black: colors.black,
       },
       fontFamily: {
         lexend: ['Lexend', 'sans-serif'] // className="font-lexend"

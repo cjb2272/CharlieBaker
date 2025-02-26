@@ -38,8 +38,9 @@ html {
 } */
 
 /*Using tailwinds apply directive to clean up className'ing a bit*/
-.p-tag-default {
+.written-content-centering-width {
   @apply lg:max-w-2xl;
+  @apply mx-auto;
 }
 
 .hr-custom {

@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const LightboxModal = ({ isOpen, currentImage, totalImages, currentIndex, onClose, onPrev, onNext }) => {
-  if (!isOpen) return null;
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    if (isOpen) {
+      setIsVisible(true);
+    } else {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 300); // Match this with your transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+  
+  if (!isOpen && !isVisible) return null;
+  
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
   
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+    <div 
+      className={`fixed inset-0 bg-black bg-opacity-80 backdrop-filter backdrop-blur-sm z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+      onClick={handleBackdropClick}
+    >
       <div className="absolute top-4 right-4">
         <button 
           onClick={onClose} 
@@ -17,10 +39,10 @@ const LightboxModal = ({ isOpen, currentImage, totalImages, currentIndex, onClos
         </button>
       </div>
       
-      <div className="flex items-center justify-center w-full h-full">
+      <div className={`flex items-center justify-center w-full h-full transition-transform duration-300 ease-in-out ${isOpen ? 'scale-100' : 'scale-95'}`} onClick={handleBackdropClick}>
         <button 
           onClick={onPrev} 
-          className="absolute left-4 text-white focus:outline-none"
+          className="absolute left-4 text-white focus:outline-none z-10"
           aria-label="Previous image"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,17 +50,17 @@ const LightboxModal = ({ isOpen, currentImage, totalImages, currentIndex, onClos
           </svg>
         </button>
         
-        <div className="max-w-5xl max-h-screen p-4">
+        <div className="max-w-5xl max-h-screen p-4" onClick={(e) => e.stopPropagation()}>
           <img 
             src={currentImage} 
             alt="Gallery Image" 
-            className="max-h-[80vh] max-w-full mx-auto"
+            className={`max-h-[80vh] max-w-full mx-auto transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
         
         <button 
           onClick={onNext} 
-          className="absolute right-4 text-white focus:outline-none"
+          className="absolute right-4 text-white focus:outline-none z-10"
           aria-label="Next image"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
