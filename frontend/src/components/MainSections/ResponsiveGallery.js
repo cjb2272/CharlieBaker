@@ -48,7 +48,7 @@ const ResponsiveGallery = ({ images, title }) => {
   }, [lightboxOpen]);
   
   return (
-    <div className="lg:max-w-4xl">
+    <>
       <ImageGallery 
         images={images} 
         openLightbox={openLightbox} 
@@ -63,7 +63,7 @@ const ResponsiveGallery = ({ images, title }) => {
         onPrev={goToPrevImage}
         onNext={goToNextImage}
       />
-    </div>
+    </>
   );
 };
 

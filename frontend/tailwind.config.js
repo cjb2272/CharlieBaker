@@ -55,7 +55,11 @@ module.exports = {
     
     //extend: {}
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     require('tailwind-scrollbar') //scrollbar styling  . ({ nocompatible: true })
     // ({ preferredStrategy: 'pseudoelements' }),
   ]

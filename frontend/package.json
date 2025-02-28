@@ -6,6 +6,7 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@react-spring/web": "^9.7.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tsparticles/basic": "^3.7.1",
     "@tsparticles/react": "^3.0.0",
     "cra-template": "1.2.0",

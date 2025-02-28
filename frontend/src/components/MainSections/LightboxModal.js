@@ -52,6 +52,7 @@ const LightboxModal = ({ isOpen, currentImage, totalImages, currentIndex, onClos
         
         <div className="max-w-5xl max-h-screen p-4" onClick={(e) => e.stopPropagation()}>
           <img 
+            loading='lazy'
             src={currentImage} 
             alt="Gallery Image" 
             className={`max-h-[80vh] max-w-full mx-auto transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0'}`}
