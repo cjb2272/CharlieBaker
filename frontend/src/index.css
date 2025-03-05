@@ -39,7 +39,7 @@ html {
 
 /*Using tailwinds apply directive to clean up className'ing a bit*/
 .written-content-centering-width {
-  @apply lg:max-w-2xl;
+  @apply lg:max-w-2xl; /*Text in paragraph format should not have lines stretching a greater length than this for ease of reading*/
   @apply mx-auto;
 }
 
@@ -60,7 +60,8 @@ html {
 
 /*px over REM can cause issues when changing root font size*/
 .reporting-tool-iframe {
-  @apply 4xs:max-h-[214px];
+  @apply mx-auto;
+  @apply 4xs:max-h-[214px]; /* @apply 4xs:max-h-[214px]; */
   @apply 3xs:max-h-[217px];
   @apply 2xs:max-h-[282px];
   @apply xs:max-h-[318px];
@@ -69,7 +70,7 @@ html {
   @apply lg:max-h-[410px];
   @apply p-1 bg-white;
   @apply border-2 border-white rounded-2xl;
-  @apply 4xs:max-w-[298px];
+  @apply 4xs:max-w-[256px]; /* @apply 4xs:max-w-[298px]; */ /*143-234*/
   @apply 3xs:max-w-[332px];
   @apply 2xs:max-w-[448px]; /*max-w-md*/
   @apply xs:max-w-[512px]; /*max-w-lg*/

@@ -10,6 +10,8 @@ import AboutSection from './MainSections/About.js'; // can leave off the .js
 import ContactSection from './MainSections/Contact.js';
 import ProjectsSection from './MainSections/Projects.js';
 
+import headshotImg from '../assets/images/casualHeadshot.webp'; //1:1
+
 // Export Default function component containing the main sections of the website
 const ScrollingPage = ({ setActiveSection }) => {
   
@@ -66,17 +68,24 @@ const ScrollingPage = ({ setActiveSection }) => {
         <div className={"lg:hidden absolute top-4 left-4 z-10 text-background"}>
           <HamburgerNavigation closeMenu={closeMenu} />
         </div>
-        <div className='py-48 text-center text-light'>
-          <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
-          <TypewriterEffect/>
-        </div>
-        <div className='max-w-5xl mx-auto my-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-          <ContactSection sectionRefs={sectionRefs}/>
-        </div>
+        <section id="sectionContact" ref={(el) => (sectionRefs.current[0] = el)}>
+          <div className='pt-48 text-center text-light'>
+            <h1 className='text-6xl font-bold'> Hi! I&apos;m Charlie</h1>
+            <TypewriterEffect/>                                                    
+          </div>
+          <div className='mx-auto my-12 max-w-[192px] 3xs:max-w-[214px]'>
+            <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden">
+              <img src={headshotImg} alt="Casual Headshot" className="w-full h-full object-cover"/>
+            </div>
+          </div>
+          <div className='max-w-md mx-auto mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
+            <ContactSection sectionRefs={sectionRefs}/>
+          </div>
+        </section>
         <hr className='mx-auto border-none bg-tertiary hr-custom'/>
         <section id="sectionAbout" ref={(el) => (sectionRefs.current[1] = el)}>
           <div className="h-12"></div> {/* Empty content block cleans up nav linking and provides space*/}
-          <h1 className="mx-auto max-w-xs mb-4 py-2 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">About Me</h1>
+          <h1 className="mx-auto max-w-max 2xs:max-w-xs mb-4 py-2 px-4 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">About Me</h1>
           <div className='mx-auto max-w-5xl mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
             <AboutSection sectionRefs={sectionRefs}/>
           </div>
@@ -84,7 +93,7 @@ const ScrollingPage = ({ setActiveSection }) => {
         <hr className='mx-auto border-none bg-tertiary hr-custom'/>
         <section id="sectionProjects" ref={(el) => (sectionRefs.current[2] = el)}>
           <div className="h-12"></div>
-          <h1 className="mx-auto max-w-xs mb-4 py-2 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">My Projects</h1>
+          <h1 className="mx-auto max-w-max 2xs:max-w-xs mb-4 py-2 px-4 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">My Projects</h1>
           <div className='mx-auto max-w-5xl mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
            <ProjectsSection sectionRefs={sectionRefs}/>
           </div>

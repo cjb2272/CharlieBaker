@@ -10,48 +10,51 @@ const Education = () => {
           I am grateful to have built countless lifelong relationships, including the family I joined with Theta Psi of Pi Kappa Phi. I jumped into the Computer Science bachelor's
 		program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
         </p>
-        <div className="container max-w-4xl mx-auto p-4">
+        <div className="container max-w-4xl mx-auto px-4 pt-4">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-3/5">
             <div className="mb-6">
               <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
-                <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover"
-                />
+                <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover"/>
               </div>
             </div>
-            <div className="prose max-w-none">
-              <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
-              Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus 
-              rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna 
-              non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut 
-              dapibus. Mauris iaculis porttitor posuere.
+            <div className="max-w-none">
+              <p className='written-content-centering-width mb-2'>
+              Alike many of the degree programs at RIT, the CS bachelors required ~1 year of Co-Op. My first Co-Op was with Priority Thinking LLC, and my second was with Retail Business Services of ADUSA. 
+              I am grateful to have had both these wonderful professional experiences throughout the course of my degree at RIT, allowing me to see my 
+              love for Computer Science translate from schoolwork and projects to a professional environment. 
               </p>
-              <p>
-              Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. 
-              Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse 
-              dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.
+              <p className='written-content-centering-width'>
+              These two periods allowed me to learn a great deal about the values, leadership, and culture I desire amongst both team and company in the workplace. 
               </p>
             </div>
           </div>
-          <div className="w-full md:w-2/5 mt-6 md:mt-0 md:flex md:items-center">
-            <div className="w-full">
+          <div className="w-full md:w-2/5">
+            <div className="mb-6">
               <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden">
-                <img src={gradFriendsImg} alt="Graduation with Friends" className="w-full h-full object-cover"
-                />
+                <img src={gradFriendsImg} alt="Graduation with Friends" className="w-full h-full object-cover"/>
               </div>
+            </div>
+            <div className="max-w-none">
+              <p className='written-content-centering-width'>
+              On the topic of leadership: within Theta Psi at RIT, I served as our Chaplain and aid to the chaplain for 7 semesters. 
+              My time in this position allowed me to greatly enhance my communication and delegation skills, as well as facilitate 
+              heavy discussions and foster environments for relationships to grow.
+              </p>
+              {/* <p>  !!! YOU HAVE FOUND BONUS TEXT !!!
+              The Chaplain oversees both the Brotherhood and Living the Ritual committees of the chapter in their operation to perform 
+              successful brotherhood and ritual events. In short, Living the Ritual is for teaching and practicing shared values and 
+              self-leadership, whereas the Brotherhood counterpart is for having fun and strengthening relationships. 
+              </p>
+              <p>
+              However with proper delegation to chairs and committees, from a larger scope the Chaplain's responsibility is to be the
+               overarching figure who is constantly mindful of the state of the chapter as a whole; The state of brotherhood amongst
+                the chapter and its individuals, in pair with the overall well being of each and every brother.
+              </p> */}
             </div>
           </div>
         </div>
         </div>
-        <p className="written-content-centering-width">Pass the duchie Bob Marley this shatter is hella potent. The cannabis industry will 
-          gravity bong a cotton mouth pizza dipped in ranch. Make a quick pipe out of an apple and release the carb Purple
-           Haze all around. Rolling down the street smoking endo, laid back. Broccoli bong butterfly gateway drugs to elevate
-            your good vibrations.</p>
-        <p className="written-content-centering-width">Hydroponic nacho pop-tarts tetrahydrocannabinol hybrid schwag stems and seeds little
-           orange hairs. Optimizing dime bags of pre-rolled honey oil dabs. Oh my gawd, they like totally know I&apos;m high.
-            Taco Bell 4th meal with Doritos Locos tacos and a knife rip on the side. Crystalized buds from trimming tasty
-             weed pens THC sativa euphoric resinated dome piece.</p>
       </section>
     );
   };

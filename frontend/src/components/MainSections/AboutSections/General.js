@@ -1,15 +1,31 @@
+import React from 'react';
+import gradFriendsImg from '../../../assets/images/meFatherGrandfather.webp'; //4:3
+
 const General = () => {
     return (
       <section id="subSectionGeneral" className="">
         <h1 className="text-2xl font-bold pb-2 written-content-centering-width">General</h1>
-        <p className="written-content-centering-width">California kush roll it up into a fat blunt for medicinal purposes to elevate your
-           consciousness. Rasta! Crystalized buds from trimming tasty weed pens THC sativa euphoric resinated dome piece.
-            Rolling down the street smoking endo, laid back. Indica is like ‘in da couch’ like straight couch lock chasing
-             waterfalls and milkers straight to your dome.</p>
-        <p className="written-content-centering-width">Guatemalan purple haze grown outdoors by ganja shaman. Fully man, keif gummies are 
-          the indoor equivalent of body high super mellow. Oh my gawd, they like totally know I&apos;m high. Hot box at 4:20 
-          the fatty dank endo doobie in a cashed roachclip, Bogart. Optimizing dime bags of pre-rolled honey oil dabs.</p>
-
+        <p className="written-content-centering-width">Hello! I am 23 years old, graduated from RIT in Computer Science, and currently 
+          seeking a full-time position in Full-Stack Development. I have 11 months of professional Software Dev. under my belt across 2 Co-Ops. 
+          Currently I am working at Raising Canes part time while working on personal projects and continuing the search for a full time position. </p>
+        <div className='mx-auto max-w-xl p-4'>
+          <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+            <img src={gradFriendsImg} alt="Myself, Father, and Grandfather on Bench" className="w-full h-full object-cover"/>
+          </div>
+        </div>          
+        <p className="written-content-centering-width mb-2">
+          I was raised in Hopkinton, Massachusetts and as a true MA resident, I have always 
+          enjoyed watching the Boston Marathon runners kickoff from the center of town since I was a child. 
+        </p>
+        <p className="written-content-centering-width mb-2">
+        To tell you a little bit about myself: I am an avid concert-goer and music listener, enjoy playing soccer in my free time, and am a lover of nature, travel, and 
+          most importantly spending quality time with family and friends. Quiz me on anything Star Wars when we cross paths, or give me a
+           book recommendation as I love to read as part of my nightly routine. 
+        </p>
+        <p className="written-content-centering-width">
+        Upon college graduation, I backpacked Europe for ~3 months alongside my friend Eli, carrying on a tradition for which my 
+        grandfather and father had also done the same after their respective graduations. 
+        </p>
       </section>
     );
   };
