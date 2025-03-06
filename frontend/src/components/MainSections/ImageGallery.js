@@ -4,11 +4,10 @@ import React from 'react';
 
 const ImageGallery = ({ images, openLightbox }) => {
   return (
-    <div className="p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 p-4 max-w-4xl mx-auto"> {/* Display 'grid' is block level */}
         {/* Primary image */}
         <div 
-          className="md:col-span-2 lg:row-span-2 lg:col-span-2 relative cursor-pointer rounded-2xl overflow-hidden" 
+          className="col-span-2 md:row-span-2 md:col-span-2 relative cursor-pointer rounded-2xl overflow-hidden" 
           onClick={() => openLightbox(0)}
         >
           <div className="aspect-w-4 aspect-h-3">
@@ -45,7 +44,6 @@ const ImageGallery = ({ images, openLightbox }) => {
           </div>
         ))}
       </div>
-    </div>
   );
 };
 

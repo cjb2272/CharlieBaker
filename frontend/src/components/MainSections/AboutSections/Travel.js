@@ -41,21 +41,23 @@ const Travel = () => {
     greeceImage30];
 
   return (
-    <section id="subSectionTravel" className="">
-      <h1 className="text-2xl font-bold pb-2 written-content-centering-width">Travel</h1>
-      <p className="written-content-centering-width">The time I spent in Greece occupies a special place in my heart. I spent 5 days in both 
+    <section id="subSectionTravel" className="w-full">
+      <div className='written-content-centering-width'>
+        <h1 className="text-2xl font-bold pb-2">Travel</h1>
+        <p >The time I spent in Greece occupies a special place in my heart. I spent 5 days in both 
         Athens, and the island of Milos among the Cyclades.</p>
+      </div>
       <ResponsiveGallery images={greeceImages} title="Greece" />
-      <p className="written-content-centering-width mb-2">While backpacking across Europe, Eli and I grew quickly fond of Greece as the country was 
+      <div className='written-content-centering-width'>
+        <p className="mb-2">While backpacking across Europe, Eli and I grew quickly fond of Greece as the country was 
         beautiful, the food absolutely astounding, and lifestyle much cheaper in comparison to our time we had just spent in Italy. 
         It was an average of about 38-40 degrees Celsius (~100-104 Fahrenheit) during our stay, so it was important to visit the 
         Acropolis first thing in the morning before the sun reached its peak in the sky. </p>
-      <p className="written-content-centering-width">On Milos, the "Moonscape" of Sarakiniko Beach felt walking upon another planet. 
+        <p>On Milos, the "Moonscape" of Sarakiniko Beach felt walking upon another planet. 
         It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on north side of island 
         made the water quite choppy at Sarakiniko and as a result it was bit unwise to cliff jump into the ocean as we had originally 
-        intended. </p>
-
-
+        intended. </p>     
+      </div>
     </section>  
   );
 };

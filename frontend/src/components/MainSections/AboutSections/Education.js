@@ -4,21 +4,20 @@ import gradFriendsImg from '../../../assets/images/gradCharlieTrayAndrew.webp'; 
 
 const Education = () => {
     return (
-      <section id="subSectionEducation" className="">
-        <h1 className="text-2xl font-bold pb-2 written-content-centering-width">Education</h1>
-        <p className="written-content-centering-width"> My 5 years at RIT were truly a blessing. 
-          I am grateful to have built countless lifelong relationships, including the family I joined with Theta Psi of Pi Kappa Phi. I jumped into the Computer Science bachelor's
-		program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
-        </p>
-        <div className="container max-w-4xl mx-auto px-4 pt-4">
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-3/5">
-            <div className="mb-6">
-              <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+      <section id="subSectionEducation" className="w-full">
+        <div className='written-content-centering-width'>
+          <h1 className="text-2xl font-bold pb-2">Education</h1>
+          <p > My 5 years at RIT were truly a blessing. 
+            I am grateful to have built countless lifelong relationships, including the family I joined with Theta Psi of Pi Kappa Phi. I jumped into the Computer Science bachelor's
+		        program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
+          </p>
+        </div>
+        <div className="max-w-4xl px-4 pt-4 mx-auto">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="md:w-3/5">
+              <div className="mb-6 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                 <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover"/>
               </div>
-            </div>
-            <div className="max-w-none">
               <p className='written-content-centering-width mb-2'>
               Alike many of the degree programs at RIT, the CS bachelors required ~1 year of Co-Op. My first Co-Op was with Priority Thinking LLC, and my second was with Retail Business Services of ADUSA. 
               I am grateful to have had both these wonderful professional experiences throughout the course of my degree at RIT, allowing me to see my 
@@ -28,14 +27,10 @@ const Education = () => {
               These two periods allowed me to learn a great deal about the values, leadership, and culture I desire amongst both team and company in the workplace. 
               </p>
             </div>
-          </div>
-          <div className="w-full md:w-2/5">
-            <div className="mb-6">
-              <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden">
+            <div className="md:w-2/5">
+              <div className="mb-6 aspect-w-3 aspect-h-4 rounded-lg overflow-hidden">
                 <img src={gradFriendsImg} alt="Graduation with Friends" className="w-full h-full object-cover"/>
               </div>
-            </div>
-            <div className="max-w-none">
               <p className='written-content-centering-width'>
               On the topic of leadership: within Theta Psi at RIT, I served as our Chaplain and aid to the chaplain for 7 semesters. 
               My time in this position allowed me to greatly enhance my communication and delegation skills, as well as facilitate 
@@ -53,7 +48,6 @@ const Education = () => {
               </p> */}
             </div>
           </div>
-        </div>
         </div>
       </section>
     );

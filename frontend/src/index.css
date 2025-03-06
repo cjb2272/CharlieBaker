@@ -39,9 +39,15 @@ html {
 
 /*Using tailwinds apply directive to clean up className'ing a bit*/
 .written-content-centering-width {
-  @apply lg:max-w-2xl; /*Text in paragraph format should not have lines stretching a greater length than this for ease of reading*/
+  @apply max-w-2xl; /*Text in paragraph format should not have lines stretching a greater length than this for ease of reading*/
   @apply mx-auto;
 }
+
+/* .special {
+  @apply max-w-4xl;
+  @apply mx-auto;
+  @apply w-full;
+} */
 
 .hr-custom {
   width: 95%;
