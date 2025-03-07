@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ImageGallery from './ImageGallery';
 import LightboxModal from './LightboxModal';
+import { deviceType } from 'detect-it';
+import { useMemo } from 'react';
 
 const ResponsiveGallery = ({ images, title }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -46,12 +48,31 @@ const ResponsiveGallery = ({ images, title }) => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxOpen]);
+
+
+  /**
+  * Detects the type of device being used.
+  * @returns {string} 'Touch Input' for touch-only devices, 'Mouse Input' for mouse or hybrid devices.
+  */
+  const detectDevice = () => {
+    if (deviceType === 'touchOnly') {
+      console.log("User is on a Touch Input Device");
+      return 'Touch Input'; // Devices with only touch input
+    } else if (deviceType === 'mouseOnly' || deviceType === 'hybrid') {
+      console.log("User is on a Mouse Input Device");
+      return 'Mouse Input'; // Devices with mouse or hybrid input
+    }
+  };
+
+  // Determine device type at render time and useMemo so we only calculate once during component lifecycle
+  const deviceInputType = useMemo(() => detectDevice(), []);
   
   return (
     <>
       <ImageGallery 
         images={images} 
         openLightbox={openLightbox} 
+        deviceInputType={deviceInputType}
       />
       
       <LightboxModal 

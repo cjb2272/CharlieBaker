@@ -6,7 +6,7 @@ import resume1White from '../../assets/iconography/resume-white512.png';
 import resume2White from '../../assets/iconography/resume2-white512.png';
 
 
-const Contact = ({sectionRefs}) => {
+const Contact = () => {
     return (
       <div className="flex flex-wrap flex-row gap-5 items-center justify-center ">
         <div>

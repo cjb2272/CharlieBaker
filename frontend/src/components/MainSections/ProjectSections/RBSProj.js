@@ -1,7 +1,6 @@
-const RBSProj = ({sectionRefs}) => {
+const RBSProj = () => {
     return (
-      // <section id="subSectionRBSProj" ref={(el) => (sectionRefs.current[4] = el)} className="">
-      <section id="subSectionRBSProj" className="">
+      <>
         <h1 className="text-2xl font-bold pb-2">Reporting Tool</h1>
         <p className="written-content-centering-width ">One Sentence Description Header. Littering and butter stuff more cerebral high couch 
           lock Abba Zabba you my only friend. </p>
@@ -16,7 +15,7 @@ const RBSProj = ({sectionRefs}) => {
            orange hairs. Optimizing dime bags of pre-rolled honey oil dabs. Oh my gawd, they like totally know I&apos;m high.
             Taco Bell 4th meal with Doritos Locos tacos and a knife rip on the side. Crystalized buds from trimming tasty
              weed pens THC sativa euphoric resinated dome piece.</p>
-      </section>
+      </>
     );
   };
   

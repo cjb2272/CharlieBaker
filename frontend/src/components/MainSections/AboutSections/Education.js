@@ -4,7 +4,7 @@ import gradFriendsImg from '../../../assets/images/gradCharlieTrayAndrew.webp'; 
 
 const Education = () => {
     return (
-      <section id="subSectionEducation" className="w-full">
+      <>
         <div className='written-content-centering-width'>
           <h1 className="text-2xl font-bold pb-2">Education</h1>
           <p > My 5 years at RIT were truly a blessing. 
@@ -49,7 +49,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-      </section>
+      </>
     );
   };
   

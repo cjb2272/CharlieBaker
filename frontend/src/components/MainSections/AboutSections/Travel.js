@@ -41,7 +41,7 @@ const Travel = () => {
     greeceImage30];
 
   return (
-    <section id="subSectionTravel" className="w-full">
+    <>
       <div className='written-content-centering-width'>
         <h1 className="text-2xl font-bold pb-2">Travel</h1>
         <p >The time I spent in Greece occupies a special place in my heart. I spent 5 days in both 
@@ -58,7 +58,7 @@ const Travel = () => {
         made the water quite choppy at Sarakiniko and as a result it was bit unwise to cliff jump into the ocean as we had originally 
         intended. </p>     
       </div>
-    </section>  
+    </>  
   );
 };
 

@@ -3,7 +3,7 @@ import gradFriendsImg from '../../../assets/images/meFatherGrandfather.webp'; //
 
 const General = () => {
     return (
-      <section id="subSectionGeneral" className="w-full">
+      <>
         <div className='written-content-centering-width'>
           <h1 className="text-2xl font-bold pb-2">General</h1>
           <p>Hello! I am 23 years old, graduated from RIT in Computer Science, and currently 
@@ -30,7 +30,7 @@ const General = () => {
           grandfather and father had also done the same after their respective graduations. 
           </p>
         </div>     
-      </section>
+      </>
     );
   };
   

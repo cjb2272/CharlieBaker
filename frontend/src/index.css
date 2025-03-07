@@ -43,12 +43,6 @@ html {
   @apply mx-auto;
 }
 
-/* .special {
-  @apply max-w-4xl;
-  @apply mx-auto;
-  @apply w-full;
-} */
-
 .hr-custom {
   width: 95%;
   height: 2px;
@@ -60,8 +54,25 @@ html {
   @apply bg-opacity-20;
   @apply pl-2;
   @apply mr-2;
-  @apply text-center;
   @apply rounded-r-md;
+}
+
+.nav-section-li-default {
+  @apply px-2;
+}
+
+.nav-main-section-a {
+  @apply block;
+  @apply ml-10;
+  @apply mr-3;
+  @apply py-2;
+}
+
+.nav-sub-section-a {
+  @apply block;
+  @apply ml-14;
+  @apply mr-3;
+  @apply py-1;
 }
 
 /*px over REM can cause issues when changing root font size*/

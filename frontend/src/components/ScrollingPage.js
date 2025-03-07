@@ -79,7 +79,7 @@ const ScrollingPage = ({ setActiveSection }) => {
             </div>
           </div>
           <div className='max-w-md mx-auto mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-            <ContactSection sectionRefs={sectionRefs}/>
+            <ContactSection/>
           </div>
         </section>
         <hr className='mx-auto border-none bg-tertiary hr-custom'/>
@@ -91,11 +91,11 @@ const ScrollingPage = ({ setActiveSection }) => {
           </div>
         </section>
         <hr className='mx-auto border-none bg-tertiary hr-custom'/>
-        <section id="sectionProjects" ref={(el) => (sectionRefs.current[2] = el)}>
+        <section id="sectionProjects" ref={(el) => (sectionRefs.current[5] = el)}>
           <div className="h-12"></div>
           <h1 className="mx-auto max-w-max 2xs:max-w-xs mb-4 py-2 px-4 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">My Projects</h1>
           <div className='mx-auto max-w-5xl mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
-           <ProjectsSection sectionRefs={sectionRefs}/>
+            <ProjectsSection sectionRefs={sectionRefs}/>
           </div>
         </section>
       </div>
@@ -115,7 +115,7 @@ const TypewriterEffect = () => {
         "I'm a Leadership Enthusiast.",
         "I'm a Descriptive Pull Requester ;)",
         "I'm a Full Stack Developer.",
-        "I'm an AGILE Lover <3.",
+        "I'm an AGILE Lover.",   //removed "<3" from end of line < notation used for pause in typing
         "I'm a Creator.",
       ],
       typeSpeed: 50, // Typing speed in milliseconds

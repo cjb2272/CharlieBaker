@@ -15,29 +15,41 @@ const SideBarNavigation = ({ activeSection }) => {
   return (
     <div className="h-screen w-48 fixed bg-background border-r-2 border-tertiary">
       <nav className="h-full text-light font-medium">
-        <ul className="h-full flex flex-col justify-center space-y-16">
+        <ul className="h-full mt-20 flex flex-col space-y-3">
           {/* className="hover:text-vibrant" */}
-          <li className={activeSection === "sectionContact" ? "selected-nav-section-custom" : "px-2 text-center"}>
+          <li className={activeSection === "sectionContact" ? "selected-nav-section-custom" : "nav-section-li-default"}>
             {/* <Link to="sectionContact" smooth={true} duration={500} className='block py-2'>Contact</Link> */}
-            <a href="#sectionContact" className="block py-2" onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}>Contact</a>
+            <a href="#sectionContact" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}>Contact</a>
           </li>
-          <li className={activeSection === "sectionAbout" ? "selected-nav-section-custom" : "px-2 text-center"}>
-            {/* <Link to="sectionAbout" smooth={true} duration={500} className='block py-2'>About</Link> */}
-            <a href="#sectionAbout" className="block py-2" onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}>About</a>
+
+          <li className={activeSection === "sectionAbout" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#sectionAbout" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}>About</a>
           </li>
-          <li className={activeSection === "sectionProjects" ? "selected-nav-section-custom" : "px-2 text-center"}>
-            {/* <Link to="sectionProjects" smooth={true} duration={500} className='block py-2'>Projects</Link> */}
-            <a href="#sectionProjects" className="block py-2" onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}>Projects</a>
+
+          <li className={activeSection === "subSectionGeneral" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#subSectionGeneral" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionGeneral")}}>General</a>
           </li>
-          
-          {/* <li><a href="#subSectionSpotifyProj" className={activeSection === "subSectionSpotifyProj" ? "text-vibrant" : ""}>Playlist Automation GPT</a></li>
-          <li><a href="#subSectionRBSProj" className={activeSection === "subSectionRBSProj" ? "text-vibrant" : ""}></a>Reporting Tool</li> */}
+          <li className={activeSection === "subSectionEducation" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#subSectionEducation" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionEducation")}}>Education</a>
+          </li>
+          <li className={activeSection === "subSectionTravel" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#subSectionTravel" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionTravel")}}>Travel</a>
+          </li>
+
+          <li className={activeSection === "sectionProjects" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#sectionProjects" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}>Projects</a>
+          </li>
+
+          <li className={activeSection === "subSectionSpotifyProj" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#subSectionSpotifyProj" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionSpotifyProj")}}>Playlist GPT</a>
+          </li>
+          <li className={activeSection === "subSectionRBSProj" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+            <a href="#subSectionRBSProj" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionRBSProj")}}>Reporting Tool</a>
+          </li> 
           
           {/*
           <li><a href="#sectionAbout" className={activeSection === "sectionAbout" ? "active" : ""}>About</a></li>
-          <li><a href="#subSectionGeneral" className={activeSection === "subSectionGeneral" ? "active" : ""}>General</a></li>
-          <li><a href="#subSectionEducation" className={activeSection === "subSectionEducation" ? "active" : ""}></a>Education</li>
-          <li><a href="#subSectionTravel" className={activeSection === "subSectionTravel" ? "active" : ""}></a>Travel</li>*/}
+          */}
         </ul>
       </nav>
     </div>
