@@ -17,12 +17,12 @@ const ImageGallery = ({ images, openLightbox, deviceInputType }) => {
             <img 
               loading="lazy" 
               src={images[0]} 
-              alt="Property Image 1" 
+              alt="1" 
               className="w-full h-full object-cover"
             />
             {isTouchDevice && (
               <div className="absolute top-2 left-2 w-16 h-8 bg-black bg-opacity-50 text-white text-sm rounded-lg p-1">
-                <img src={imageGalleryIconSolid} alt="Image Gallery Icon" className="inline-block w-5 h-5" /> {/* img and span are inline by default */}
+                <img src={imageGalleryIconSolid} alt="Gallery" className="inline-block w-5 h-5" /> {/* img and span are inline by default */}
                 <span className='inline-block h-5'>1/{images.length}</span>
               </div>
             )}
@@ -45,7 +45,7 @@ const ImageGallery = ({ images, openLightbox, deviceInputType }) => {
               <img 
                 loading="lazy" 
                 src={image} 
-                alt={`Property Image ${index + 2}`} 
+                alt={`${index + 2}`} 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>

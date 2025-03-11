@@ -3,7 +3,7 @@ import spotifySVG from '../../assets/iconography/socials/Spotify_logo_without_te
 import xTwitterSVG from '../../assets/iconography/socials/X_logo_2023.svg'; 
 import linkedInPNG from '../../assets/iconography/socials/In-White-40.png'; 
 import resume1White from '../../assets/iconography/resume-white512.png';
-import resume2White from '../../assets/iconography/resume2-white512.png';
+//import resume2White from '../../assets/iconography/resume2-white512.png';
 
 
 const Contact = () => {
