@@ -9,7 +9,7 @@
  * the components folder is a container for all additional components that will be used in the app.
  */
 import './App.css';
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 import SideBarNavigation from './components/SideBarNavigation.js';
 import ScrollingPage from './components/ScrollingPage.js';
 

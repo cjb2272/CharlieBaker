@@ -17,33 +17,41 @@ const SideBarNavigation = ({ activeSection }) => {
       <nav className="h-full text-light font-medium">
         <ul className="h-full mt-20 flex flex-col space-y-3">
           {/* className="hover:text-vibrant" */}
-          <li className={activeSection === "sectionContact" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "sectionContact" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             {/* <Link to="sectionContact" smooth={true} duration={500} className='block py-2'>Contact</Link> */}
             <a href="#sectionContact" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}>Contact</a>
           </li>
 
-          <li className={activeSection === "sectionAbout" ? "selected-nav-section-custom" : "nav-section-li-default"}>
-            <a href="#sectionAbout" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}>About</a>
+          <li className="nav-section-li-default">
+            <a 
+              href="#sectionAbout" 
+              className={["subSectionGeneral", "subSectionEducation", "subSectionTravel"].includes(activeSection) ? "selected-nav-main-section-a-custom" : "nav-main-section-a"} 
+              onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}>
+            About</a> {/* "sectionAbout" removed from being tracked by intersectionObserver */}
           </li>
 
-          <li className={activeSection === "subSectionGeneral" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "subSectionGeneral" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             <a href="#subSectionGeneral" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionGeneral")}}>General</a>
           </li>
-          <li className={activeSection === "subSectionEducation" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "subSectionEducation" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             <a href="#subSectionEducation" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionEducation")}}>Education</a>
           </li>
-          <li className={activeSection === "subSectionTravel" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "subSectionTravel" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             <a href="#subSectionTravel" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionTravel")}}>Travel</a>
           </li>
 
-          <li className={activeSection === "sectionProjects" ? "selected-nav-section-custom" : "nav-section-li-default"}>
-            <a href="#sectionProjects" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}>Projects</a>
+          <li className="nav-section-li-default">
+            <a 
+              href="#sectionProjects" 
+              className={["subSectionSpotifyProj", "subSectionRBSProj"].includes(activeSection) ? "selected-nav-main-section-a-custom" : "nav-main-section-a"}
+              onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}>
+            Projects</a> {/* "sectionProjects" removed from being tracked by intersectionObserver */}
           </li>
 
-          <li className={activeSection === "subSectionSpotifyProj" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "subSectionSpotifyProj" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             <a href="#subSectionSpotifyProj" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionSpotifyProj")}}>Playlist GPT</a>
           </li>
-          <li className={activeSection === "subSectionRBSProj" ? "selected-nav-section-custom" : "nav-section-li-default"}>
+          <li className={activeSection === "subSectionRBSProj" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
             <a href="#subSectionRBSProj" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionRBSProj")}}>Reporting Tool</a>
           </li> 
           

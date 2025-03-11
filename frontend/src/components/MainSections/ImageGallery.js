@@ -1,6 +1,5 @@
 import React from 'react';
-import imageGalleryIconSolid from '../../assets/iconography/image-gallery-solid.svg';
-import imageGalleryIconRegular from '../../assets/iconography/image-gallery-regular.svg';
+import imageGalleryIconSolid from '../../assets/iconography/image-gallery-solid-white.svg';
 
 // When the native aspect-ratio CSS property gains wider browser support, the tailwind aspect ratio plugin can be easily removed.
 
@@ -22,9 +21,9 @@ const ImageGallery = ({ images, openLightbox, deviceInputType }) => {
               className="w-full h-full object-cover"
             />
             {isTouchDevice && (
-              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-sm rounded-lg px-2 py-1 inline-flex space-x-2 ">
-              <img src={imageGalleryIconSolid} alt="Image Gallery Icon" className="w-5 h-5" />
-              <span className='h-5'>1/{images.length}</span>
+              <div className="absolute top-2 left-2 w-16 h-8 bg-black bg-opacity-50 text-white text-sm rounded-lg p-1">
+                <img src={imageGalleryIconSolid} alt="Image Gallery Icon" className="inline-block w-5 h-5" /> {/* img and span are inline by default */}
+                <span className='inline-block h-5'>1/{images.length}</span>
               </div>
             )}
             <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

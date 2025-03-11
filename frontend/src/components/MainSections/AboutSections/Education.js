@@ -8,8 +8,8 @@ const Education = () => {
         <div className='written-content-centering-width'>
           <h1 className="text-2xl font-bold pb-2">Education</h1>
           <p > My 5 years at RIT were truly a blessing. 
-            I am grateful to have built countless lifelong relationships, including the family I joined with Theta Psi of Pi Kappa Phi. I jumped into the Computer Science bachelor's
-		        program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
+            I am grateful to have built countless lifelong relationships, including the family I joined with Theta Psi of Pi Kappa Phi. I jumped into the Computer Science 
+            bachelor&apos;s program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
           </p>
         </div>
         <div className="max-w-4xl px-4 pt-4 mx-auto">

@@ -2,8 +2,8 @@ const SpotifyProj = () => {
     return (
       <>
         <h1 className="text-2xl font-bold pb-2">Playlist Automation with ChatGPT</h1>
-        <p className="written-content-centering-width mb-2">One Sentence Description Header. Littering and butter stuff more cerebral high couch 
-        lock Abba Zabba you my only friend. </p>
+        <p className="written-content-centering-width mb-2">I am currently working on a Flask Application leveraging the OpenAI API in tandem 
+          with Spotify&apos;s Web API in order to automate various procedures within the streaming service. </p>
         <p className="written-content-centering-width mb-2">PASTE CONTENT IMAGE/VIDEO DEMO HERE </p>
         <p className="written-content-centering-width mb-2">Rolling down the street smoking endo, laid back. Optimizing dime bags of pre-rolled 
           honey oil dabs. Fully man, keif gummies are the indoor equivalent of body high super mellow. Have you ever 
