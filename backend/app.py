@@ -15,6 +15,10 @@ from flask import Flask, render_template, request, jsonify, redirect, session, u
 app = Flask(__name__, static_folder="../frontend/build", template_folder="../frontend/build")
 app.secret_key = os.environ.get('FLASK_SECRET_KEY')
 
+# Set production environment
+app.config['ENV'] = 'production'
+app.config['DEBUG'] = False
+
 # Serve React's index.html for the root route
 @app.route("/")
 def index():
@@ -28,5 +32,14 @@ def static_files(path):
     return send_from_directory(app.static_folder, path)
 
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    
+    # something to consider doing---
+    # # Only used for direct script execution (development)
+    # debug_mode = os.environ.get('FLASK_ENV') != 'production'
+    # app.run(debug=debug_mode)
+    # ^^^ This way, you can easily switch between production and development 
+    # modes by setting the FLASK_ENV environment variable, without changing your code.
+
+    app.run() # debug=True removed.
