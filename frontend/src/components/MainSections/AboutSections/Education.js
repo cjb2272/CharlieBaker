@@ -19,7 +19,8 @@ const Education = () => {
               <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover" />
             </div>
             <p className='written-content-centering-width mb-2'>
-              Like many of the degree programs at RIT, the CS bachelors required ~1 year of Co-Op. My first Co-Op was with Priority Thinking LLC, and my second was with Retail Business Services of ADUSA.
+              Like many of the degree programs at RIT, the CS bachelors required ~1 year of Co-Op. My first Co-Op was with <a href="https://prioritythinking.com/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Priority Thinking LLC</a>,
+              and my second was with <a href="https://www.adusa.com/home/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Retail Business Services</a> of ADUSA.
               I am grateful to have had both these wonderful professional experiences throughout the course of my degree at RIT, allowing me to see my
               love for Computer Science translate from schoolwork and projects to a professional environment.
             </p>

@@ -2,8 +2,8 @@ const RBSProj = () => {
   return (
     <>
       <h1 className="text-2xl font-bold pb-2">Reporting Tool</h1>
-      <p className="written-content-centering-width "> Under my Software Development Co-Op with Retail Business
-        Services (Ahold Delhaize) I worked on the Merchandising Solutions team. This team provides software aiming to support the
+      <p className="written-content-centering-width "> Under my Software Development Co-Op with <a href="https://www.adusa.com/home/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Retail Business Services</a> (Ahold Delhaize)
+        I worked on the Merchandising Solutions team. This team provides software aiming to support the
         technical details of how ADUSA merchandises products across their east coast grocery retail brands.
       </p>
       <div className="py-4">
