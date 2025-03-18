@@ -12,7 +12,7 @@ const Education = () => {
           bachelor&apos;s program with minimal programming experience and fell in love after the first few weeks upon how rewarding it felt to solve my first python problems in CS1.
         </p>
       </div>
-      <div className="max-w-4xl px-4 pt-4 mx-auto">
+      <div className="max-w-4xl pt-4 mx-auto">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-3/5">
             <div className="mb-6 aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
