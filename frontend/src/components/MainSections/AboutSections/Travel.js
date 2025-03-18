@@ -33,35 +33,151 @@ import greeceImage29 from '../../../assets/images/greece/20240719_173735126_iOS_
 import greeceImage30 from '../../../assets/images/greece/20240720_085539258_iOS_10_11zon.webp';
 
 const Travel = () => {
-  const greeceImages = [greeceImage1, greeceImage2, greeceImage3, greeceImage4, greeceImage5, 
-    greeceImage6, greeceImage7, greeceImage8, greeceImage9, greeceImage10, greeceImage11, 
-    greeceImage12, greeceImage13, greeceImage14, greeceImage15, greeceImage16, greeceImage17, 
-    greeceImage18, greeceImage19, greeceImage20, greeceImage21, greeceImage22, greeceImage23,
-    greeceImage24, greeceImage25, greeceImage26, greeceImage27, greeceImage28, greeceImage29,
-    greeceImage30];
+  const greeceImages = [
+    {
+      src: greeceImage1,
+      description: "The Parthenon at the Acropolis"
+    },
+    {
+      src: greeceImage2,
+      description: "Mandrakia Fishing Village"
+    },
+    {
+      src: greeceImage3,
+      description: "Athens from Lycabettus Hill climb"
+    },
+    {
+      src: greeceImage4,
+      description: "Flag of Greece atop the Acropolis"
+    },
+    {
+      src: greeceImage5,
+      description: "View of Athens"
+    },
+    {
+      src: greeceImage6,
+      description: "Narrow Streets of Anafiotika, Athens"
+    },
+    {
+      src: greeceImage7,
+      description: "Erechtheion atop the Acropolis"
+    },
+    {
+      src: greeceImage8,
+      description: "Paralia Agios Ioannis at Sunset, Milos"
+    },
+    {
+      src: greeceImage9,
+      description: "Sarakiniko Beach"
+    },
+    {
+      src: greeceImage10,
+      description: "Exploring Sarakiniko"
+    },
+    {
+      src: greeceImage11,
+      description: "Exploring Sarakiniko"
+    },
+    {
+      src: greeceImage12,
+      description: "Exploring Sarakiniko"
+    },
+    {
+      src: greeceImage13,
+      description: "Fishing Village at Ag. Konstantinos"
+    },
+    {
+      src: greeceImage14,
+      description: "Firopotamos"
+    },
+    {
+      src: greeceImage15,
+      description: "Tsigrado Beach Below"
+    },
+    {
+      src: greeceImage16,
+      description: "Exploring Plaka, Milos"
+    },
+    {
+      src: greeceImage17,
+      description: "Overlook of Fyriplaka Beach"
+    },
+    {
+      src: greeceImage18,
+      description: "Sunset Stop on an Island Drive"
+    },
+    {
+      src: greeceImage19,
+      description: "Old Sulfer Mine on Milos"
+    },
+    {
+      src: greeceImage20,
+      description: "Odeon of Herodes Atticus, Athens Acropolis"
+    },
+    {
+      src: greeceImage21,
+      description: "Acropolis Museum"
+    },
+    {
+      src: greeceImage22,
+      description: "Stage of the first Modern Olympic Games in Athens"
+    },
+    {
+      src: greeceImage23,
+      description: "Atop the Acropolis"
+    },
+    {
+      src: greeceImage24,
+      description: "\"Delicious Souvlaki\" in Athens. Word's cannot suffice."
+    },
+    {
+      src: greeceImage25,
+      description: "Greek Orthodox Church in Athens"
+    },
+    {
+      src: greeceImage26,
+      description: "Evening at Sarakiniko"
+    },
+    {
+      src: greeceImage27,
+      description: "Sarakiniko Sunset"
+    },
+    {
+      src: greeceImage28,
+      description: "Sarakiniko Sunset"
+    },
+    {
+      src: greeceImage29,
+      description: "A Greek Orthodox Church and Pizza for dinner."
+    },
+    {
+      src: greeceImage30,
+      description: "Papafragas"
+    }
+  ];
 
   return (
     <>
       <div className='written-content-centering-width'>
         <h1 className="text-2xl font-bold pb-2">Travel</h1>
-        <p >The time I spent in Greece occupies a special place in my heart. I spent 5 days in both 
-        Athens, and the island of Milos among the Cyclades.</p>
+        <p>The time I spent in Greece occupies a special place in my heart. I spent 5 days in both
+          Athens, and the island of Milos among the Cyclades.</p>
       </div>
       <ResponsiveGallery images={greeceImages} title="Greece" />
       <div className='written-content-centering-width'>
-        <p className="mb-2">While backpacking across Europe, Eli and I grew quickly fond of Greece as the country was 
-        beautiful, the food absolutely astounding, and lifestyle much cheaper in comparison to our time we had just spent in Italy. 
-        It was an average of about 38-40 degrees Celsius (~100-104 Fahrenheit) during our stay, so it was important to visit the 
-        Acropolis first thing in the morning before the sun reached its peak in the sky. </p>
-        <p>On Milos, the "Moonscape" of Sarakiniko Beach felt walking upon another planet. 
-        It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on north side of island 
-        made the water quite choppy at Sarakiniko and as a result it was bit unwise to cliff jump into the ocean as we had originally 
-        intended. </p>     
+        <p className="mb-2">While backpacking across Europe, Eli and I grew quickly fond of Greece as the country was
+          beautiful, the food absolutely astounding, and lifestyle much cheaper in comparison to our time we had just spent in Italy.
+          It was an average of about 38-40 degrees Celsius (~100-104 Fahrenheit) during our stay, so it was important to visit the
+          Acropolis first thing in the morning before the sun reached its peak in the sky. </p>
+        <p>On Milos, the "Moonscape" of Sarakiniko Beach felt walking upon another planet.
+          It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on north side of island
+          made the water quite choppy at Sarakiniko and as a result it was bit unwise to cliff-jump into the ocean as we had originally
+          intended. </p>
       </div>
-    </>  
+    </>
   );
 };
 
 // indent-8 md:indent-16
-  
+
 export default Travel;
