@@ -160,18 +160,18 @@ const Travel = () => {
     <>
       <div className='written-content-centering-width'>
         <h1 className="text-2xl font-bold pb-2">Travel</h1>
-        <p>The time I spent in Greece occupies a special place in my heart. I spent 5 days in both
-          Athens, and the island of Milos among the Cyclades.</p>
+        <p>The time I spent in Greece occupies a special place in my heart. I spent 5 days each in
+          Athens and on the island of Milos among the Cyclades.</p>
       </div>
       <ResponsiveGallery images={greeceImages} title="Greece" />
       <div className='written-content-centering-width'>
         <p className="mb-2">While backpacking across Europe, Eli and I grew quickly fond of Greece as the country was
-          beautiful, the food absolutely astounding, and lifestyle much cheaper in comparison to our time we had just spent in Italy.
+          beautiful, the food was absolutely astounding, and the lifestyle was much cheaper compared to our recent stay in Italy.
           It was an average of about 38-40 degrees Celsius (~100-104 Fahrenheit) during our stay, so it was important to visit the
           Acropolis first thing in the morning before the sun reached its peak in the sky. </p>
-        <p>On Milos, the "Moonscape" of Sarakiniko Beach felt walking upon another planet.
-          It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on north side of island
-          made the water quite choppy at Sarakiniko and as a result it was bit unwise to cliff-jump into the ocean as we had originally
+        <p>On Milos, walking on the "Moonscape" of Sarakiniko Beach felt like being on another planet.
+          It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on the north side of the island
+          made the water quite choppy at Sarakiniko and as a result it was a bit unwise to cliff-jump into the ocean as we had originally
           intended. </p>
       </div>
     </>

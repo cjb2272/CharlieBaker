@@ -15,14 +15,14 @@ const RBSProj = () => {
         <li className>Building out a new Dynamic Reporting methodology.</li>
         <li className>Working through the UAT Rollout of the Reporting Tool for Hannaford & Food Lion.</li>
       </ol>
-      <p className="written-content-centering-width mb-2">With the old methodology, each report and any new ones would require numerous
-        steps to be taken- all before becoming available to our users:</p>
+      <p className="written-content-centering-width mb-2">With the old methodology, each report (including new ones) required numerous
+        steps before becoming available to users:</p>
       <ul className="list-disc written-content-centering-width mb-2 pl-10">
-        <li className>First, entirely coding the front and back end of a new Form</li>
+        <li className>First, fully coding both front and back-end components of a WinForm</li>
         <li className>The SQL work to pull the specific data</li>
         <li className>Thorough testing phases</li>
       </ul>
-      <p className="written-content-centering-width">Each new report needed, took up valuable time and effort. With the Dynamic
+      <p className="written-content-centering-width">Each new report required valuable time and effort. With the Dynamic
         Reporting solution I implemented, the team gained the ability to instantaneously provide a specific data representation
         in the form of a Report, by only having to make a new SQL Stored Procedure in our Database. No Code Needed.</p>
     </>

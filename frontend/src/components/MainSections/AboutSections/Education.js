@@ -19,10 +19,10 @@ const Education = () => {
               <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover" />
             </div>
             <p className='written-content-centering-width mb-2'>
-              Like many of the degree programs at RIT, the CS bachelors required ~1 year of Co-Op. My first Co-Op was with <a href="https://prioritythinking.com/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Priority Thinking LLC</a>,
+              Like many of the degree programs at RIT, the CS bachelor's required ~one year of Co-Op experience. My first Co-Op was with <a href="https://prioritythinking.com/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Priority Thinking LLC</a>,
               and my second was with <a href="https://www.adusa.com/home/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Retail Business Services</a> of ADUSA.
               I am grateful to have had both these wonderful professional experiences throughout the course of my degree at RIT, allowing me to see my
-              love for Computer Science translate from schoolwork and projects to a professional environment.
+              love for computer science translate from schoolwork and projects to a professional environment.
             </p>
             <p className='written-content-centering-width'>
               These two periods allowed me to learn a great deal about the values, leadership, and culture I desire amongst both team and company in the workplace.
@@ -33,7 +33,7 @@ const Education = () => {
               <img src={gradFriendsImg} alt="Graduation with Friends" className="w-full h-full object-cover" />
             </div>
             <p className='written-content-centering-width'>
-              On the topic of leadership: within Theta Psi at RIT, I served as our Chaplain and aid to the chaplain for 7 semesters.
+              On the topic of leadership: within Theta Psi at RIT, I served as Chaplain and aid to the chaplain for 7 semesters.
               My time in this position allowed me to greatly enhance my communication and delegation skills, as well as facilitate
               heavy discussions and foster environments for relationships to grow.
             </p>

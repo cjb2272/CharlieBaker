@@ -108,6 +108,15 @@ html {
 }
 /*VERY IMPORTANT NOTE!!!!! THE ORDER IN WHICH YOU DO THE APPLY RESPONSIVE BREAKPOINTS MATTERS. sm, md, lg versus large being the first*/
 
+/* https://play.tailwindcss.com/2eBipAu8Bt  */
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
 /*
 I specified the lexend font family in tailwind.config.js
 
