@@ -43,7 +43,7 @@ module.exports = {
     },
     colors: {
       background: '#000000',
-      light: '#BFFCF9',
+      light: '#ECFDFE',
       vibrant: '#00C9C8',
       secondary: '#426B69', //#47817F
       tertiary: '#426B69',
