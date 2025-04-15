@@ -17,7 +17,7 @@ import ScrollingPage from './components/ScrollingPage.js';
  * 
  * @returns 
  */
-function App() {
+const App = () => {
   const [activeSection, setActiveSection] = useState(null);
 
   // Memoize setActiveSection to avoid unnecessary re-renders
@@ -27,13 +27,13 @@ function App() {
   // Without useCallback, a new instance of the setActiveSection function 
   // would be created on every re-render of App.
   // which would inturn re-render the SideBarNavigation component and the ScrollingPage component.
-  
+
   return (
     <>
       <div className={"hidden lg:block"}>
         <SideBarNavigation activeSection={activeSection} />
       </div>
-      <ScrollingPage setActiveSection={handleSetActiveSection}/>
+      <ScrollingPage setActiveSection={handleSetActiveSection} />
     </>
   );
 }

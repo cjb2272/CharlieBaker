@@ -1,4 +1,4 @@
-import React, {useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { useSpring, animated } from '@react-spring/web';
 import { Bars3Icon } from '@heroicons/react/24/solid'
@@ -8,11 +8,11 @@ const AnimatedMenuItems = animated(MenuItems);
 const AnimatedContainer = animated.div;
 
 // closeMenu prop- when set to true, means the menu should close
-const HamburgerNavigation = ( {closeMenu} ) => { 
+const HamburgerNavigation = ({ closeMenu }) => {
   const menuButtonRef = useRef(null);
 
   const [buttonStyles, buttonApi] = useSpring(() => ({
-    from: {boxShadow: '0px 3px 2px 2px rgba(0,0,0,0.3)'},
+    from: { boxShadow: '0px 3px 2px 2px rgba(0,0,0,0.3)' },
     config: { tension: 200, friction: 20 }
   }));
 
@@ -25,7 +25,7 @@ const HamburgerNavigation = ( {closeMenu} ) => {
   // Spring for background container
   const [containerStyles, containerApi] = useSpring(() => ({
     from: {
-      backgroundColor: 'rgba(191, 252, 249, 0)', 
+      backgroundColor: 'rgba(191, 252, 249, 0)',
       backdropFilter: "blur(0px)",
     },
     config: { tension: 200, friction: 20 }
@@ -35,7 +35,7 @@ const HamburgerNavigation = ( {closeMenu} ) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetID);
     if (targetElement) {
-      targetElement.scrollIntoView({behavior: "smooth"});
+      targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -52,73 +52,73 @@ const HamburgerNavigation = ( {closeMenu} ) => {
         }, 0);
       }
     }
-  }, [closeMenu]); // missing menuButtonRef in dependency list!?
+  }, [closeMenu]);
 
   return (
     <Menu>
       {({ open }) => { // Open render prop
-  
+
         buttonApi.start({
           boxShadow: open ? '0px 0px 0px 0px rgba(0,0,0,0.3)' : '0px 3px 2px 2px rgba(0,0,0,0.3)'
         });
-  
+
         containerApi.start({
           backgroundColor: open ? 'rgba(191, 252, 249, 0.5)' : 'rgba(191, 252, 249, 0)',
           backdropFilter: open ? "blur(4px)" : "blur(0px)"
         });
-          
+
         menuItemApi.start({
           opacity: open ? 1 : 0,
           transform: open ? 'scale(1)' : 'scale(0.95)',
         });
-  
+
         return (
-            <>
-              <AnimatedContainer
-                style={{...containerStyles}}
-                className='p-2 rounded-xl'
+          <>
+            <AnimatedContainer
+              style={{ ...containerStyles }}
+              className='p-2 rounded-xl'
+            >
+              <AnimatedMenuButton
+                style={{ ...buttonStyles }}
+                className="p-2 rounded-full bg-light"
+                ref={menuButtonRef}
               >
-                <AnimatedMenuButton
-                  style={{...buttonStyles}}
-                  className="p-2 rounded-full bg-light"
-                  ref={menuButtonRef}
-                >
-                  <Bars3Icon className="size-12"/> {/* Hamburger Icon */}
-                </AnimatedMenuButton>
-                <AnimatedMenuItems
-                  style={menuItemStyles}
-                  className="flex flex-col items-start mt-2 space-y-2 text-xl"
-                >
-                  <MenuItem className="">
-                    <a
-                      href="#sectionContact"
-                      className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
-                      onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}
-                    >
-                      Contact
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="">
-                    <a
-                      href="#sectionAbout"
-                      className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
-                      onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}
-                    >
+                <Bars3Icon className="size-12" /> {/* Hamburger Icon */}
+              </AnimatedMenuButton>
+              <AnimatedMenuItems
+                style={menuItemStyles}
+                className="flex flex-col items-start mt-2 space-y-2 text-xl"
+              >
+                <MenuItem className="">
+                  <a
+                    href="#sectionContact"
+                    className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                    onClick={(e) => { handleSmoothScroll(e, "sectionContact") }}
+                  >
+                    Contact
+                  </a>
+                </MenuItem>
+                <MenuItem className="">
+                  <a
+                    href="#sectionAbout"
+                    className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                    onClick={(e) => { handleSmoothScroll(e, "sectionAbout") }}
+                  >
                     About
-                    </a>
-                  </MenuItem>
-                  <MenuItem className="">
-                    <a
-                      href="#sectionProjects"
-                      className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
-                      onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}
-                      >
-                      Projects
-                    </a>
-                  </MenuItem>
-                </AnimatedMenuItems>
-              </AnimatedContainer>
-            </>
+                  </a>
+                </MenuItem>
+                <MenuItem className="">
+                  <a
+                    href="#sectionProjects"
+                    className={`px-4 py-2 bg-light rounded-full data-[focus]:bg-vibrant`}
+                    onClick={(e) => { handleSmoothScroll(e, "sectionProjects") }}
+                  >
+                    Projects
+                  </a>
+                </MenuItem>
+              </AnimatedMenuItems>
+            </AnimatedContainer>
+          </>
         );
       }}
     </Menu>

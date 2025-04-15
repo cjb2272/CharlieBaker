@@ -4,38 +4,38 @@ import LightboxModal from './LightboxModal';
 import { deviceType } from 'detect-it';
 import { useMemo } from 'react';
 
-const ResponsiveGallery = ({ images, title }) => {
+const ResponsiveGallery = ({ images }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
     document.body.classList.add('overflow-hidden'); // Prevent scrolling
   };
-  
+
   const closeLightbox = () => {
     setLightboxOpen(false);
     document.body.classList.remove('overflow-hidden');
   };
-  
+
   const goToPrevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       (prevIndex - 1 + images.length) % images.length
     );
   };
-  
+
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       (prevIndex + 1) % images.length
     );
   };
-  
+
   // Handle keyboard navigation
   React.useEffect(() => {
     const handleKeyDown = (e) => {
       if (!lightboxOpen) return;
-      
+
       if (e.key === 'ArrowRight') {
         goToNextImage();
       } else if (e.key === 'ArrowLeft') {
@@ -44,10 +44,10 @@ const ResponsiveGallery = ({ images, title }) => {
         closeLightbox();
       }
     };
-    
+
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxOpen]);
+  }, [lightboxOpen]);  // We are missing "goToNextImage" and "goToPrevImage" however this shouldn't cause issues
 
 
   /**
@@ -66,16 +66,16 @@ const ResponsiveGallery = ({ images, title }) => {
 
   // Determine device type at render time and useMemo so we only calculate once during component lifecycle
   const deviceInputType = useMemo(() => detectDevice(), []);
-  
+
   return (
     <>
-      <ImageGallery 
-        images={images} 
-        openLightbox={openLightbox} 
+      <ImageGallery
+        images={images}
+        openLightbox={openLightbox}
         deviceInputType={deviceInputType}
       />
-      
-      <LightboxModal 
+
+      <LightboxModal
         isOpen={lightboxOpen}
         currentImage={images[currentImageIndex]}
         totalImages={images.length}

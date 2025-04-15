@@ -7,7 +7,7 @@ const RBSProj = () => {
         technical details of how ADUSA merchandises products across their east coast grocery retail brands.
       </p>
       <div className="py-4">
-        <iframe className="reporting-tool-iframe" src="https://1drv.ms/p/c/287aef5d7048c2e1/IQSqZ3rzpgV7R4skFUpfs2Z5AakKP0O1FqCpfjpCl67DgFk?em=2&amp;wdAr=1.7770833333333333&wdSlideIndex=5" width="2380px" height="1440px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        <iframe className="reporting-tool-iframe" src="https://1drv.ms/p/c/287aef5d7048c2e1/IQSqZ3rzpgV7R4skFUpfs2Z5AakKP0O1FqCpfjpCl67DgFk?em=2&amp;wdAr=1.7770833333333333&wdSlideIndex=5" width="2380px" height="1440px" frameBorder="0">This is an embedded <a target="_blank" href="https://office.com" rel="noreferrer">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps" rel="noreferrer">Office</a>.</iframe>
       </div>
       <p className="written-content-centering-width mb-2">Revamping the Reporting Tool application was a primary project of mine
         during my time with the Merchandising Solutions team. The two main avenues through which I worked on the Reporting Tool are as follows.</p>

@@ -169,7 +169,7 @@ const Travel = () => {
           beautiful, the food was absolutely astounding, and the lifestyle was much cheaper compared to our recent stay in Italy.
           It was an average of about 38-40 degrees Celsius (~100-104 Fahrenheit) during our stay, so it was important to visit the
           Acropolis first thing in the morning before the sun reached its peak in the sky. </p>
-        <p>On Milos, walking on the "Moonscape" of Sarakiniko Beach felt like being on another planet.
+        <p>On Milos, walking on the &quot;Moonscape&quot; of Sarakiniko Beach felt like being on another planet.
           It is truly one of the most beautiful places I will ever see in my entire life. The 20-25mph winds on the north side of the island
           made the water quite choppy at Sarakiniko and as a result it was a bit unwise to cliff-jump into the ocean as we had originally
           intended. </p>

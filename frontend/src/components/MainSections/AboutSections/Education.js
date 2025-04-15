@@ -19,7 +19,7 @@ const Education = () => {
               <img src={campusRITImg} alt="RIT Global Village Aerial View" className="w-full h-full object-cover" />
             </div>
             <p className='written-content-centering-width mb-2'>
-              Like many of the degree programs at RIT, the CS bachelor's required ~one year of Co-Op experience. My first Co-Op was with <a href="https://prioritythinking.com/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Priority Thinking LLC</a>,
+              Like many of the degree programs at RIT, the CS bachelor&apos;s required ~one year of Co-Op experience. My first Co-Op was with <a href="https://prioritythinking.com/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Priority Thinking LLC</a>,
               and my second was with <a href="https://www.adusa.com/home/" target="_blank" rel="noreferrer" className='hover:text-vibrant underline'>Retail Business Services</a> of ADUSA.
               I am grateful to have had both these wonderful professional experiences throughout the course of my degree at RIT, allowing me to see my
               love for computer science translate from schoolwork and projects to a professional environment.
