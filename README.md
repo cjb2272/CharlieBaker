@@ -2,9 +2,9 @@
 
 Visit [charliebaker.me](https://charliebaker.me)
 
-I can't wait to itterate upon this website over the course of my lifetime!
-
 The main intention is to showcase what I am working on as well as talk about who I am and my interests.
+
+I can't wait to iterate upon this website over the course of my lifetime!
 
 ### Overview
 
