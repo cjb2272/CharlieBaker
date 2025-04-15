@@ -26,3 +26,6 @@ __pycache__/
 
 # the launch.json config file
 .vscode/
+
+# notes
+frontend/src/notes/

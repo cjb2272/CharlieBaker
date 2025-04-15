@@ -7,9 +7,8 @@ const AnimatedMenuButton = animated(MenuButton);
 const AnimatedMenuItems = animated(MenuItems);
 const AnimatedContainer = animated.div;
 
-// closeMenu is a prop that when set to true, means the menu should close
+// closeMenu prop- when set to true, means the menu should close
 const HamburgerNavigation = ( {closeMenu} ) => { 
-  //const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
 
   const [buttonStyles, buttonApi] = useSpring(() => ({
@@ -46,7 +45,6 @@ const HamburgerNavigation = ( {closeMenu} ) => {
       // Trigger a click event on the Menu.Button to Close the menu
       const isHamburgerMenuCurrentlyOpen = menuButtonRef.current.getAttribute('aria-expanded') === 'true';
       if (closeMenu && isHamburgerMenuCurrentlyOpen) {
-        //console.log("!!! Programatically Closing Menu with menuButtonRef.current.click(); !!!"); 
         setTimeout(() => { //avoiding flush sync
           menuButtonRef.current.click();
           // setTimeout delays execution until after React has completed its current rendering cycle.\
@@ -69,7 +67,6 @@ const HamburgerNavigation = ( {closeMenu} ) => {
           backdropFilter: open ? "blur(4px)" : "blur(0px)"
         });
           
-        // api.start triggers whenever the state of open changes
         menuItemApi.start({
           opacity: open ? 1 : 0,
           transform: open ? 'scale(1)' : 'scale(0.95)',
@@ -80,7 +77,6 @@ const HamburgerNavigation = ( {closeMenu} ) => {
               <AnimatedContainer
                 style={{...containerStyles}}
                 className='p-2 rounded-xl'
-                //ref={menuRef}
               >
                 <AnimatedMenuButton
                   style={{...buttonStyles}}
@@ -89,10 +85,9 @@ const HamburgerNavigation = ( {closeMenu} ) => {
                 >
                   <Bars3Icon className="size-12"/> {/* Hamburger Icon */}
                 </AnimatedMenuButton>
-                {/* In React Spring, an 'animated' component recieves SpringValues through the style prop */}
                 <AnimatedMenuItems
                   style={menuItemStyles}
-                  className="flex flex-col items-start mt-2 space-y-2 text-xl" //MenuItems is a div by default
+                  className="flex flex-col items-start mt-2 space-y-2 text-xl"
                 >
                   <MenuItem className="">
                     <a

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-//import { loadFull } from "tsparticles";
-import { loadBasic  } from "@tsparticles/basic"; // "@tsparticles/basic" package install
+import { loadBasic  } from "@tsparticles/basic";
 import { MoveDirection, OutMode } from "@tsparticles/engine";
 
 
@@ -9,7 +8,7 @@ const ParticlesBackground = () => {
   const [isInit, setIsInit] = useState(false);
 
   useEffect(() => {
-    console.log("ParticlesBackground Effect running post render..."); // ENSURE this runs only once per application lifetime
+    console.log("ParticlesBackground Effect running post render..."); // ENSURED this runs only once per application lifetime
   
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -20,10 +19,8 @@ const ParticlesBackground = () => {
     }).then(() => {  //.then() is a promise that runs after the async function is complete
       setIsInit(true);
     });
-    // no cleanup specified, if we are init an engine shouldnt we kill it
   }, []); // runs once on inital component Mount | isInit is reactive though, shouldn't Linter flag this?
 
-  // function that takes one param 'container' and logs it to the console
   const particlesLoaded = (container) => {
     console.log("particles loaded: ", container);
   };
@@ -35,9 +32,8 @@ const ParticlesBackground = () => {
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
-          options={starsOptions}  //starsOptions particlesOptions
+          options={starsOptions}
         />
-        {/* <div className="particle-banner-content">{children}</div> */}
       </>
     );
   }

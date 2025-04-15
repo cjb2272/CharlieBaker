@@ -7,7 +7,7 @@ const ImageGallery = ({ images, openLightbox, deviceInputType }) => {
   const isTouchDevice = deviceInputType === 'Touch Input';
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 p-4 max-w-4xl mx-auto"> {/* Display 'grid' is block level */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 p-4 max-w-4xl mx-auto">
       {/* Primary image */}
       <div
         className="col-span-2 md:row-span-2 md:col-span-2 relative cursor-pointer rounded-2xl overflow-hidden"
@@ -22,7 +22,7 @@ const ImageGallery = ({ images, openLightbox, deviceInputType }) => {
           />
           {isTouchDevice && (
             <div className="absolute top-2 left-2 w-16 h-8 bg-black bg-opacity-50 text-white text-sm rounded-lg p-1">
-              <img src={imageGalleryIconSolid} alt="Gallery" className="inline-block w-5 h-5" /> {/* img and span are inline by default */}
+              <img src={imageGalleryIconSolid} alt="Gallery" className="inline-block w-5 h-5" />
               <span className='inline-block h-5'>1/{images.length}</span>
             </div>
           )}

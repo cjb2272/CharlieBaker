@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Link } from "react-scroll";
 
 const SideBarNavigation = ({ activeSection }) => {
 
@@ -16,9 +15,7 @@ const SideBarNavigation = ({ activeSection }) => {
     <div className="h-screen w-48 fixed bg-background border-r-2 border-tertiary">
       <nav className="h-full text-light font-medium">
         <ul className="h-full mt-20 flex flex-col space-y-3">
-          {/* className="hover:text-vibrant" */}
           <li className={activeSection === "sectionContact" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
-            {/* <Link to="sectionContact" smooth={true} duration={500} className='block py-2'>Contact</Link> */}
             <a href="#sectionContact" className="nav-main-section-a" onClick={(e) => {handleSmoothScroll(e, "sectionContact")}}>Contact</a>
           </li>
 
@@ -27,7 +24,7 @@ const SideBarNavigation = ({ activeSection }) => {
               href="#sectionAbout" 
               className={["subSectionGeneral", "subSectionEducation", "subSectionTravel"].includes(activeSection) ? "selected-nav-main-section-a-custom" : "nav-main-section-a"} 
               onClick={(e) => {handleSmoothScroll(e, "sectionAbout")}}>
-            About</a> {/* "sectionAbout" removed from being tracked by intersectionObserver */}
+            About</a>
           </li>
 
           <li className={activeSection === "subSectionGeneral" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
@@ -45,7 +42,7 @@ const SideBarNavigation = ({ activeSection }) => {
               href="#sectionProjects" 
               className={["subSectionSpotifyProj", "subSectionRBSProj"].includes(activeSection) ? "selected-nav-main-section-a-custom" : "nav-main-section-a"}
               onClick={(e) => {handleSmoothScroll(e, "sectionProjects")}}>
-            Projects</a> {/* "sectionProjects" removed from being tracked by intersectionObserver */}
+            Projects</a> 
           </li>
 
           <li className={activeSection === "subSectionSpotifyProj" ? "selected-nav-section-li-custom" : "nav-section-li-default"}>
@@ -55,9 +52,6 @@ const SideBarNavigation = ({ activeSection }) => {
             <a href="#subSectionRBSProj" className="nav-sub-section-a" onClick={(e) => {handleSmoothScroll(e, "subSectionRBSProj")}}>Reporting Tool</a>
           </li> 
           
-          {/*
-          <li><a href="#sectionAbout" className={activeSection === "sectionAbout" ? "active" : ""}>About</a></li>
-          */}
         </ul>
       </nav>
     </div>

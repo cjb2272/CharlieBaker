@@ -178,6 +178,4 @@ const Travel = () => {
   );
 };
 
-// indent-8 md:indent-16
-
 export default Travel;

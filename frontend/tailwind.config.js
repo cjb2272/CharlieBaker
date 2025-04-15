@@ -7,8 +7,11 @@
  *    - also found on github somewhere
  * 
  * Use tailwind.config.js for defining reusable themes (e.g., fonts, colors, spacing).
- * DONT MISTAKE THIS FOR BEING A GLOBAL CSS FILE, we are defining things to use.
+ * 
+ * The theme section is where you define your project’s 
+ * color palette, type scale, fonts, breakpoints, border radius values, and more.
  */
+ 
 
 const colors = require('tailwindcss/colors')
 
@@ -30,7 +33,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        lime: colors.lime, // Extend default colors with Lime palette
+        lime: colors.lime, // Extend default colors with Lime palette 
         white: colors.white,
         black: colors.black,
       },
@@ -48,13 +51,8 @@ module.exports = {
       secondary: '#426B69', //#47817F
       tertiary: '#426B69',
       transparent: 'transparent',
-      //powerpointgray: '#444444'
     }
-    //fontFamily: {
-    //  sans: ['Graphik', 'sans-serif'], //className="font-sans"
-    //}
     
-    //extend: {}
   },
   corePlugins: {
     aspectRatio: false,
@@ -65,8 +63,3 @@ module.exports = {
     // ({ preferredStrategy: 'pseudoelements' }),
   ]
 }
-
-/**
- * The theme section is where you define your project’s 
- * color palette, type scale, fonts, breakpoints, border radius values, and more.
- */

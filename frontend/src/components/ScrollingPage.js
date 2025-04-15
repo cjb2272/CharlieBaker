@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Typed from 'typed.js';
 import HamburgerNavigation from './HamburgerNavigation.js';
-import AboutSection from './MainSections/About.js'; // can leave off the .js
+import AboutSection from './MainSections/About.js';
 import ContactSection from './MainSections/Contact.js';
 import ProjectsSection from './MainSections/Projects.js';
 
@@ -61,7 +61,7 @@ const ScrollingPage = ({ setActiveSection }) => {
 
   return (
     <>
-      {/*h-screen- 100% of the viewport height.      vv TODO REMOVE COLOR v   margin left 192+16=208px (xxl theme in config) */}
+      {/*margin left 192+16=208px (xxl theme in config) */}
       <div
         className="ml-4 pr-4 lg:ml-xxl h-screen bg-transparent text-light overflow-y-scroll scrollbar scrollbar-thumb-tertiary scrollbar-track-transparent"
         onScroll={handleCloseMenuOnScroll}>
@@ -83,7 +83,7 @@ const ScrollingPage = ({ setActiveSection }) => {
           </div>
         </section>
         <hr className='mx-auto border-none bg-tertiary hr-custom' />
-        <section id="sectionAbout"> {/* ref={(el) => (sectionRefs.current[1] = el)} */}
+        <section id="sectionAbout">
           <div className="h-12"></div> {/* Empty content block cleans up nav linking and provides space*/}
           <h1 className="mx-auto max-w-max 2xs:max-w-xs mb-4 py-2 px-4 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">About Me</h1>
           <div className='mx-auto max-w-5xl mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
@@ -91,7 +91,7 @@ const ScrollingPage = ({ setActiveSection }) => {
           </div>
         </section>
         <hr className='mx-auto border-none bg-tertiary hr-custom' />
-        <section id="sectionProjects"> {/* ref={(el) => (sectionRefs.current[5] = el)} */}
+        <section id="sectionProjects">
           <div className="h-12"></div>
           <h1 className="mx-auto max-w-max 2xs:max-w-xs mb-4 py-2 px-4 text-center text-4xl font-bold bg-secondary border-2 border-tertiary rounded-3xl text-light">My Projects</h1>
           <div className='mx-auto max-w-5xl mb-12 p-4 bg-secondary border-2 border-tertiary rounded-3xl'>
