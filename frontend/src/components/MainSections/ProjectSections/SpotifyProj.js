@@ -1,5 +1,5 @@
 import React from 'react';
-import testPlaylistImg from '../../../assets/images/test-chance-playlist-spotify-screenshot.webp'; //4:3
+import testPlaylistImg from '../../../assets/images/chancePlaylistRequest.png'; //3:2
 
 const SpotifyProj = () => {
   return (
@@ -8,7 +8,7 @@ const SpotifyProj = () => {
       <p className="written-content-centering-width mb-2">I am currently working on a Flask application leveraging the OpenAI API in tandem
         with Spotify&apos;s Web API in order to automate various procedures within the streaming service. </p>
       <div className='mx-auto max-w-xl p-4'>
-        <div className="aspect-w-16- aspect-h-10 rounded-lg overflow-hidden">
+        <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
           <img src={testPlaylistImg} alt="Spotify Screenshot of Automated Playlist" className="w-full h-full object-cover" />
         </div>
       </div>

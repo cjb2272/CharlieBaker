@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import spotifySVG from '../../assets/iconography/socials/Spotify_logo_without_text_black.svg';
-import xTwitterSVG from '../../assets/iconography/socials/X_logo_2023.svg';
-import linkedInPNG from '../../assets/iconography/socials/In-White-40.png';
-import resume1White from '../../assets/iconography/resume-white512.png';
+import spotifySVG from '../../assets/iconography/socials/Spotify_logo_without_text_ECFDFE.png';
+import xTwitterSVG from '../../assets/iconography/socials/GitHub_Invertocat_ECFDFE.png';
+import linkedInPNG from '../../assets/iconography/socials/In-ECFDFE-40.png';
+import resume1White from '../../assets/iconography/resume-ECFDFE512.png';
 
 
 const Contact = () => {
