@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import spotifySVG from '../../assets/iconography/socials/Spotify_logo_without_text_ECFDFE.png';
-import xTwitterSVG from '../../assets/iconography/socials/GitHub_Invertocat_ECFDFE.png';
+import githubSVG from '../../assets/iconography/socials/GitHub_Invertocat_ECFDFE.png';
 import linkedInPNG from '../../assets/iconography/socials/In-ECFDFE-40.png';
 import resume1White from '../../assets/iconography/resume-ECFDFE512.png';
 
@@ -68,8 +68,8 @@ const Contact = () => {
         <a href="https://open.spotify.com/user/charlie7977" target="_blank" rel="noreferrer">
           <img src={spotifySVG} alt="Spotify" className="w-10 h-10" />
         </a>
-        <a href="https://twitter.com/charles_ba82391" target="_blank" rel="noreferrer">
-          <img src={xTwitterSVG} alt="Twitter" className="w-10 h-10" />
+        <a href="https://github.com/cjb2272" target="_blank" rel="noreferrer">
+          <img src={githubSVG} alt="GitHub" className="w-10 h-10" />
         </a>
         <a href="https://www.linkedin.com/in/charles-baker-914707204" target="_blank" rel="noreferrer">
           <img src={linkedInPNG} alt="LinkedIn" className="w-10 h-10" />
