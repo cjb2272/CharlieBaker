@@ -5,6 +5,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@n8n/chat": "^0.45.0",
     "@react-spring/web": "^9.7.5",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tsparticles/basic": "^3.7.1",
