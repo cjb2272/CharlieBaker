@@ -32,8 +32,13 @@ const App = () => {
   // which would inturn re-render the SideBarNavigation component and the ScrollingPage component.
 
   useEffect(() => {
+    const webhookUrl = process.env.REACT_APP_PERSONAL_SITE_CHATBOT_N8N_WEBHOOK_URL;
+    if (!webhookUrl) {
+      console.warn('Webhook URL is not defined.');
+      return;
+    }
 		createChat({
-			webhookUrl: process.env.REACT_APP_PERSONAL_SITE_CHATBOT_N8N_WEBHOOK_URL,
+			webhookUrl,
       initialMessages: [
 		    'Hey, Its Charlie! (not really) 🤣',
 		    'My name is CharlieBot. Whats up?'
