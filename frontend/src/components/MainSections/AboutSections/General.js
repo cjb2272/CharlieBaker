@@ -6,9 +6,9 @@ const General = () => {
     <>
       <div className='written-content-centering-width'>
         <h1 className="text-2xl font-bold pb-2">General</h1>
-        <p>Hello! I am 23 years old, graduated from RIT in Computer Science, and currently
-          seeking a full-time position in Full-Stack Development. I have 11 months of professional software development experience across two Co-Ops.
-          Currently I am working at Raising Cane&apos;s part-time while working on personal projects and continuing the search for a full-time position. </p>
+        <p>Hello! I am 24 years old, graduated from RIT in Computer Science, and currently
+          seeking a full-time position. I have 11 months of professional software development experience across two Co-Ops.
+        </p>
       </div>
       <div className='mx-auto max-w-xl p-4'>
         <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
