@@ -4,6 +4,7 @@
 
 import { React, StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import '@n8n/chat/style.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
