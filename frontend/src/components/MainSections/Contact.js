@@ -62,7 +62,7 @@ const Contact = () => {
         <p className="">home: Boston, MA</p>
       </div>
       <div className='contactBreakpoint:max-w-28 flex flex-row flex-wrap gap-4 items-center justify-center'>
-        <a href="https://1drv.ms/b/c/287aef5d7048c2e1/EVGFgYt0rkJDm_gzEJFkv4YBpgMqCupKGtafPKloa0YzTA?e=DRDeec" target="_blank" rel="noreferrer">
+        <a href="https://1drv.ms/b/c/287aef5d7048c2e1/EVGFgYt0rkJDm_gzEJFkv4YBpgMqCupKGtafPKloa0YzTA" target="_blank" rel="noreferrer">
           <img src={resume1White} alt="Resume" className="w-11 h-11" />
         </a>
         <a href="https://open.spotify.com/user/charlie7977" target="_blank" rel="noreferrer">
