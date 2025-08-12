@@ -26,7 +26,7 @@ const Contact = () => {
   });
 
   const handleCopyEmail = () => {
-    const email = 'charlie.baker777@yahoo.com';
+    const email = 'charlesbaker1777@gmail.com';
     navigator.clipboard.writeText(email);
     setShowCopied(true);
     setTimeout(() => {

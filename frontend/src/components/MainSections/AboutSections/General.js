@@ -6,8 +6,8 @@ const General = () => {
     <>
       <div className='written-content-centering-width'>
         <h1 className="text-2xl font-bold pb-2">General</h1>
-        <p>Hello! I am 24 years old, graduated from RIT in Computer Science, and currently
-          seeking a full-time position. I have 11 months of professional software development experience across two Co-Ops.
+        <p>Hello! I am 24 years old, graduated from RIT in Computer Science, and a proud member of the Loss Prevention Team at TJX. 
+          Prior to joining TJX in August as a Systems Analyst, I participated in two exciting software development Co-Ops.
         </p>
       </div>
       <div className='mx-auto max-w-xl p-4'>

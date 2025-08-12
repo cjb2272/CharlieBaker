@@ -111,12 +111,14 @@ const TypewriterEffect = () => {
     const typed = new Typed(domElementRef.current, {
       strings: [
         "Welcome to my website!",
-        "I'm a Software Engineer.",
+        "I'm a Software Developer.",
         "I'm a Leadership Enthusiast.",
-        "I'm a Descriptive Pull Requester &#59;&#41;",
-        "I'm a Full Stack Developer.",
-        "I'm an AGILE Lover &lt;3",
+        "I'm a Systems Analyst.",
+        "I'm a Context Engineer.",
+        "I'm a Weekend Vibe Coder &#59;&#41;",
         "I'm a Creator.",
+        "I'm a Future Agent Manager.",
+        "I'm a Full Stack Developer.",
       ],
       typeSpeed: 50, // Typing speed in milliseconds
       backSpeed: 30, // Backspace speed
