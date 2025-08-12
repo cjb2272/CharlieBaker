@@ -44,7 +44,7 @@ const Contact = () => {
             onClick={handleCopyEmail}
             className="underline hover:text-vibrant hover:cursor-pointer select-none"
           >
-            charlie.baker777@yahoo.com
+            charlesbaker1777@gmail.com
           </p>
           <animated.div
             style={{
