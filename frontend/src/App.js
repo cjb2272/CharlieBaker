@@ -10,7 +10,7 @@
  */
 import './App.css';
 import React, { useState, useCallback, useEffect } from 'react';
-import { createChat } from '@n8n/chat';
+// import { createChat } from '@n8n/chat';
 import SideBarNavigation from './components/SideBarNavigation.js';
 import ScrollingPage from './components/ScrollingPage.js';
 
@@ -30,29 +30,30 @@ const App = () => {
   // would be created on every re-render of App.
   // which would inturn re-render the SideBarNavigation component and the ScrollingPage component.
 
-  useEffect(() => {
-    const webhookUrl = process.env.REACT_APP_PERSONAL_SITE_CHATBOT_N8N_WEBHOOK_URL;
-    if (!webhookUrl) {
-      console.warn('Webhook URL is not defined.');
-      return;
-    }
-		createChat({
-			webhookUrl,
-      initialMessages: [
-		    'Hey, Its Charlie! (not really) 🤣',
-		    'My name is CharlieBot. Whats up?'
-	    ],
-	    i18n: {
-		    en: {
-			    title: '',
-			    subtitle: "Start a chat with CharlieBot below.",
-			    footer: '',
-			    getStarted: 'New Conversation',
-			    inputPlaceholder: 'Type your question..',
-		    },
-	    }
-		});
-	}, []);
+  // OLD N8N Chatbot code
+  // useEffect(() => {
+  //   const webhookUrl = process.env.REACT_APP_PERSONAL_SITE_CHATBOT_N8N_WEBHOOK_URL;
+  //   if (!webhookUrl) {
+  //     console.warn('Webhook URL is not defined.');
+  //     return;
+  //   }
+	// 	createChat({
+	// 		webhookUrl,
+  //     initialMessages: [
+	// 	    'Hey, Its Charlie! (not really) 🤣',
+	// 	    'My name is CharlieBot. Whats up?'
+	//     ],
+	//     i18n: {
+	// 	    en: {
+	// 		    title: '',
+	// 		    subtitle: "Start a chat with CharlieBot below.",
+	// 		    footer: '',
+	// 		    getStarted: 'New Conversation',
+	// 		    inputPlaceholder: 'Type your question..',
+	// 	    },
+	//     }
+	// 	});
+	// }, []);
 
   return (
     <>

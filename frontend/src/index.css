@@ -122,11 +122,11 @@ take note of the order in which responsive breakpoints applied
 n8n CharlieBot CHATBOT custom START
 */
 
-:root {
-  /*3 central custom css vars*/
-  --chat--color-light: #ecfdfe; /*redefined*/
-  --chat--color-vibrant: #00c9c8; /*added*/
-  --chat--color-secondary: #426b69; /*redefined*/
+/* :root {
+  3 central custom css vars at top here
+  --chat--color-light: #ecfdfe;    redefined
+  --chat--color-vibrant: #00c9c8;    added
+  --chat--color-secondary: #426b69;    redefined
 
   --chat--color-primary: var(--chat--color-light);
   --chat--color-primary-shade-50: #db4061;
@@ -163,7 +163,7 @@ n8n CharlieBot CHATBOT custom START
 .chat-window {
   box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.3),
     0px -3px 2px 2px rgba(0, 0, 0, 0.3), -3px 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /*
 n8n CharlieBot CHATBOT custom END
